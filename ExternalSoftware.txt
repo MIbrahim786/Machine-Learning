@@ -1,0 +1,22 @@
+1)
+
+An Implementation of ID3 --- Decision Tree Learning Algorithm
+Wei Peng, Juhua Chen and Haiping Zhou
+
+Project of Comp 9417: Machine Learning
+University of New South Wales, School of Computer Science & Engineering,
+Sydney, NSW 2032, Australia
+
+weipengtiger@hotmail.com
+
+http://web.arch.usyd.edu.au/~wpeng/DecisionTree2.pdf
+
+???
+Machine Learning (2009)
+Volume: 13
+???
+
+***Student project***
+
+---------------------------
+
