@@ -1,0 +1,54 @@
+Decision Trees:
+What is decision tree: A decision tree is a tree in which each branch node represents a choice between a number of alternatives, and each leaf node represents a decision.
+
+Rules for classifying data using attributes.
+The tree consists of decision nodes and leaf nodes.
+A decision node has two or more branches, each representing values for the attribute tested.
+A leaf node attribute produces a homogeneous result (all in one class), which does not require additional classification testing.
+Decision Tree classify instances by sorting them down the tree from the root to some leaf node, which provide the classifications of the instances, Each node in the tree specifies a test of some attribute of the instances & each branch descending .
+a leaf node - indicates the value of the target attribute (class) of examples, or  a decision node - specifies some test to be carried out on a single attribute-value, with one branch and sub-tree for each possible outcome of the test
+
+Decision tree are commonly used for gaining information for the purpose of decision -making. Decision tree starts with a root node on which it is for users to take actions. From this node, users split each node recursively according to decision tree learning algorithm. The final result is a decision tree in which each branch represents a possible scenario of decision and its outcome.
+What is decision tree learning algorithm?
+	'Decision tree learning is a method for approximating discrete-valued target functions, in which the learned function is represented by a decision tree. Decision tree learning is one of the most widely used and practical methods for inductive inference'. (Tom M. Mitchell,1997,p52)
+	Decision tree learning algorithm has been successfully used in expert systems in capturing knowledge. The main task performed in these systems is using inductive methods to the given values of attributes of an unknown object to determine appropriate classification according to decision tree rules.
+	Decision trees classify instances by traverse from root node to leaf node. We start from root node of decision tree, testing the attribute specified by this node, then moving down the tree branch according to the attribute value in the given set. This process is the repeated at the sub-tree level.
+
+
+What is decision tree learning algorithm suited for:
+
+1. Instance is represented as attribute-value pairs. For example, attribute 'Temperature' and its value 'hot', 'mild', 'cool'. We are also concerning to extend attribute-value to continuous-valued data (numeric attribute value) in our project.
+
+2. The target function has discrete output values. It can easily deal with instance which is assigned to a Boolean decision, such as 'true' and 'false', 'p(positive)' and 'n(negative)'. Although it is possible to extend target to real-valued outputs, we will cover the issue in the later part of this report.
+
+3.The training data may contain errors. This can be dealt with pruning techniques that we will not cover here. The 3 widely used decision tree learning algorithms are: ID3, ASSISTANT and C4.5. We will cover ID3 in this report.
+
+
+ID3 Algorithm
+
+1. A mathematical algorithm for building the decision tree.
+2. It has been invented by J. Ross Quinlan in 1979.
+3. Uses Information Theory invented by Shannon in 1948.
+4. It builds the tree from the top down, with no backtracking.
+5. Information Gain is used to select the most useful attribute for classification.
+
+In a case of ID3 algorithm, it takes three set of parameters. 
+(Examples, Target attribute, Attributes)
+First is an example that represents the training set. Here training set contains both positive and negative samples. Target attribute is the one whose value has to be determined by using decision tree. And third parameter is the list of attributes that will be tested by the decision tree. Attribute selection is an important part of ID3 algorithm. With the attribute selection step, two terms comes into picture: Entropy and Information gain. With the attribute selection process, the algorithm decides which attribute will be appropriate for becoming a node in the tree. 
+For an instance play ball. In this example, outlook, temperature, humidity, wind, play ball are attributes. Out of this attributes play ball is considered as classifier because depending on the value of play ball (yes or no), the decision will be made whether tennis can be played or not.    
+
+
+
+
+
+
+References
+
+H.Hamilton. E. Gurak, L. Findlater W. Olive
+http://dms.irb.hr/tutorial/tut_dtrees.php
+http://www2.cs.uregina.ca/~dbd/cs831/notes/ml/dtrees/4_dtrees1.html
+P. Winston, "Learning by Building Identification Trees", in P. Winston, Artificial Intelligence, Addison-Wesley Publishing Company, 1992, pp. 423-442.
+
+
+
+
