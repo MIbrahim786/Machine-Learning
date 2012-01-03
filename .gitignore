@@ -3,4 +3,6 @@
 *.log
 *.dvi
 *.toc
-
+*.bbl
+*.blg
+*.pdf
