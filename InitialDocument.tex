@@ -28,13 +28,12 @@ xxxx yet to write
 \section{Introduction}
 \label{sec:int}
 
-This project is about machine learning. In simple words machine learning can be described as a technique or method that involves making the machine to learn and behave based on training data given and past experience to improve its performance. To cite from \cite{Alpaydin2010MachineLearning} 
+This project is about machine learning. In simple words machine learning can be described as a technique or method that involves making the machine to learn and behave based on training data given and past experience to improve its performance. To cite from \cite{Alpaydin2010MachineLearning}:
 \begin{quote}
   Machine learning is programming computers to optimize a performance
   criterion using example data or past experience.
 
-
-Machine learning is the study of computer algorithms that improve automatically through experience. To cite from \cite{Mitchell1997MachineLearning}
+  Machine learning is the study of computer algorithms that improve automatically through experience. To cite from \cite{Mitchell1997MachineLearning} XXX ??? where does this belong to? obviously not into a quotation XXX
 \end{quote}
 Machine learning also covers concepts of artificial intelligence (AI) and these techniques are widely used in every field. Face detection, text recognition, strategy games, web searching application are among few to mention that we see in day-to-day life. Machine learning concepts are applied into many other fields such as mathematics, biology and statistics.
 
@@ -43,14 +42,17 @@ Machine learning also covers concepts of artificial intelligence (AI) and these 
 \subsection{Machine learning}
 \label{sec:machinelearn}
 
-Machine learning combines the ideas from neuroscience and mathematics, physics, biology, and statistics to make computers learn.
+Machine learning combines the ideas from neuroscience and mathematics, physics, biology, and statistics to make computers learn. XXX this is empty talk --- the truth is much more precise and concrete XXX
 
-Machine learning is something that makes computers modify or adapt with their own action (whether the action would be predictions or controlling a robot) these action are more accurate and the accuracy is measured by how well the chosen actions imitate the correct ones. To cite from \cite{MachineLearningAnAlgorithmicPerspective}
+Machine learning is something that makes computers modify or adapt with their own action (whether the action would be predictions or controlling a robot) these action are more accurate and the accuracy is measured by how well the chosen actions imitate the correct ones. To cite from \cite{MachineLearning2009AlgorithmicPerspective} XXX where is the citation? XXX
 
 Another thing that has driven the change in direction of machine learning research is data mining, which looks at the extraction of useful information from massive datasets and which requires efficient algorithms, putting more of the emphasis back onto computer science. 
 
 The computational complexity of the machine learning methods will also be of interest to us since what we are producing is algorithms. It is particularly important because we might want to use some of the methods on very large datasets, so algorithms that have high-degree polynomial complexity in the size of dataset will be a problem. The complexity is often broken into two parts: the complexity of training and the complexity of applying the trained algorithm.
-Training does not happen very often, and is not usually time critical, so it can take longer. However, we often want a decision about a test point quickly and there are potentially lots of test points when an algorithm is in use, so this needs to have low computational cost.
+Training does not happen very often, and is not usually time critical, so it can take longer. However, we often want a decision about a test point quickly and there are potentially lots of test points when an algorithm is in use, so this needs to have low computational cost. XXX what is the relevance of this paragraph? XXX
+
+XXX MISSING IS THE PRECISE DEFINITION! XXX
+
 
 \subsection{Decision trees}
 \label{sec:dectree}
@@ -58,13 +60,15 @@ Training does not happen very often, and is not usually time critical, so it can
 
 Decision tree is a learning technique that it is used to test an object and analyse it. It returns positive or negative value based on that decision can be taken for a tested object. At a lower level decision trees can be also be represented in the form of if-then rules that can be easily understand
 
-Decision tree classifies in the form of tree structure where each branch node represents a choice between a number of alternatives, and each leaf node represents a decision. Decision tree mainly classify data using attributes and it consists of decision nodes and leaf nodes. The tree has number of branches representing with the tested attribute values. Leaf node attribute generate uniform result and it doesn't require any additional classification testing.	
+Decision tree classifies in the form of tree structure where each branch node represents a choice between a number of alternatives, and each leaf node represents a decision. Decision tree mainly classify data using attributes and it consists of decision nodes and leaf nodes. The tree has number of branches representing with the tested attribute values. Leaf node attribute generate uniform result and it doesn't require any additional classification testing.
+
+XXX How does this relate to the general algorithmic problem of machine learning? One needs PRECISE DEFINITIONS! XXX
 
 A leaf node indicates the value of target attribute where as a decision node states some test which can be carried out on single attribute-value, with one branch and sub-tree for each possible outcome of the test.
 
 Decision Tree classify instances by sorting them down the tree from the root to some leaf node, which provide the classifications of the instances, Each node in the tree specifies a test of some attribute of the instances and each branch descending.
 Decision tree are commonly used for obtaining information for the purpose of decision making. The tree starts with root node then user split each node recursively according to decision tree learning algorithm.
-According to Tom M. Mitchell Decision tree learning is a method for approximating discrete-valued target functions, in which the learned function is represented by a decision tree. Decision tree learning is one of the most widely used and practical methods for inductive inference. The 3 widely used decision tree learning algorithms are: ID3, ASSISTANT and C4.5. Based on research have decided to do an implementation on ID3 algorithm.
+According to Tom M. Mitchell XXX where? make precise citations! and no name-dropping! XXX Decision tree learning is a method for approximating discrete-valued target functions, in which the learned function is represented by a decision tree. Decision tree learning is one of the most widely used and practical methods for inductive inference. The 3 widely used decision tree learning algorithms are: ID3, ASSISTANT and C4.5. Based on research have decided to do an implementation on ID3 algorithm. XXX SSources? XXX
 
 
 \subsection{ID3}
@@ -72,7 +76,7 @@ According to Tom M. Mitchell Decision tree learning is a method for approximatin
 
 ID3 Algorithm:
 
-ID3 algorithm deals with the generation of decision tree, J.Ross Quinlan developed ID3 at the University of Sydney in the year 1983. The fundamental idea of ID3 is to build the decision tree by using top-down greedy search through the given sets to test each attribute at every tree node.
+ID3 algorithm deals with the generation of decision tree, J.Ross Quinlan developed ID3 at the University of Sydney in the year 1983. XXX SOURCE? XXX The fundamental idea of ID3 is to build the decision tree by using top-down greedy search through the given sets to test each attribute at every tree node.
 In case of ID3 algorithm, it takes three set of parameters
 (Examples, Target attribute, Attributes)
 First is an example that represents the training set. Here training set contains both positive and negative samples. Target attribute is the one whose value has to be determined by using decision tree. And third parameter is the list of attributes that will be tested by the decision tree. Attribute selection is an important part of ID3 algorithm. With the attribute selection step, two terms comes into picture: Entropy and Information gain. With the attribute selection process, the algorithm decides which attribute will be appropriate for becoming a node in the tree.
@@ -87,10 +91,10 @@ For an instance play ball. In this example, outlook, temperature, humidity, wind
 
 Source control management (Git):
 
-Git is a powerful, fastest, sophisticated distributed version control system this is quickly replacing subversion in open source and corporate programming communities. It is written in C language and it is active from several years. It designed to handle extremely large projects with speed and efficiency,	but just as well suited for small personal repositories; it is especially popular in the open source community, serving as a development platform for projects like the Linux Kernel, Ruby on Rails, WINE or X.org.[4]
+Git is a powerful, fastest, sophisticated distributed version control system this is quickly replacing subversion in open source and corporate programming communities. It is written in C language and it is active from several years. It designed to handle extremely large projects with speed and efficiency,	but just as well suited for small personal repositories; it is especially popular in the open source community, serving as a development platform for projects like the Linux Kernel, Ruby on Rails, WINE or X.org.[4] XXX ??? XXX
 Birth of GIT:
 In the year 2002 Linus Benedict Torvalds uses Bit-Keeper for tracking Linux when it gets better, he writes his own Source Control Management, GIT. Later GIT officially used to track Linux and released GIT 1.5.0 version in the year 2007.
-I will be using 1.7.8 version.
+I will be using 1.7.8 version. XXX Sources? XXX
 
 Repository:  A repository is a set or collection of commits, the work which you have done past it shows in an archive and looks like project's working tree in your machine or someone else's. It holds a set of branches and tags, to identify certain commits by name.
 
@@ -103,6 +107,8 @@ Commit : the word "commit" is often used by git, other revision control systems 
 
 \subsection{Unit testing (JUnit)}
 \label{sec:junit}
+
+XXX sources? XXX
 
 Junit is a tool for project testing and debugging created by Kent beck and Erich Gamma.
 JUnit is an open source java testing framework which uses annotations to identify methods that are tests. It also called as tool for project testing and debugging. JUnit assumes that all test methods will be executed in an arbitrary order. Consequently tests should not depend on other tests.
@@ -129,26 +135,37 @@ xxxx yet to add more
 
 
 
-\subsection{Document of source code}
+\subsection{Documentation of source code}
 \label{sec:documentsource}
-\pagebreak
+
 
 \section{Evaluation and application}
 \label{sec:eval}
 
-\subsection{Project Goal}
+\subsection{Project goal}
 \label{sec:goal}
 
 Having information about the past weather conditions and about its influence on the decision to venture out into high
 seas, by finding out if the coastal areas are safe for marine and tourist activities using the value of meteorology parameters and the decision tree built with data mining technique.
 
 An algorithm based on the ID3 will be built for developing a data mining application to predict climate conditions.
-The architecture is shown in below figure: A database to extract values for both dependent and independent variables using JDBC(Java Database Connectivity).
+The architecture is shown in below figure:
+
+XXX an external database is not of use here --- complete overkill, and making
+the system hard to use; the input is just given as files; very important also:
+it is hard to create tables with databases, but this is needed (of course,
+we do not hardcode attributes!) XXX
+
+ A database to extract values for both dependent and independent variables using JDBC(Java Database Connectivity).
 An algorithm based on ID3 will be used to create decision tree and the resultant knowledge database will be used to make decisions related to the safety of coastal areas for marine and tourist activities.
 
-\subsection{User Interface}
+\subsection{User interface}
+
 One of the purposes of this system is to build it as a stand alone application. Having this in mind, it is decided to build the application in Java. The application would be connected to a database in Microsoft SQL Server. Knowing that collecting, exploring and selecting the right data are critically important, I will create a database called Metinfo.
 The attributes are:
+
+XXX the following is just false --- of course, attributes must not be
+hardcoded, but come from the training data XXX
 
 \begin{itemize}
 \item Temperature 
@@ -187,7 +204,7 @@ And there possible values are:
 \label{sec:meth}
 
 
-\subsection{Functional Requirements}
+\subsection{Functional requirements}
 
 \begin{center}
 \begin{tabular}{|r|l|}
@@ -230,7 +247,7 @@ Validate data entered into the system.
 \end{tabular}
 \end{center}
 
-\subsection{Non Functional Requirements}
+\subsection{Non-functional requirements}
 
 \begin{tabular}{|r|l|}
 
