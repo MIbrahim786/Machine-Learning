@@ -142,12 +142,22 @@ Having information about the past weather conditions and about its influence on 
 seas, by finding out if the coastal areas are safe for marine and tourist activities using the value of meteorology parameters and the decision tree built with data mining technique.
 
 An algorithm based on the ID3 will be built for developing a data mining application to predict climate conditions.
-The architecture is shown in below figure: A database to extract values for both dependent and independent variables using JDBC(Java Database Connectivity).
+The architecture is shown in below figure:
+
+XXX an external database is not of use here --- complete overkill, and making
+the system hard to use; the input is just given as files; very important also:
+it is hard to create tables with databases, but this is needed (of course,
+we do not hardcode attributes!) XXX
+
+ A database to extract values for both dependent and independent variables using JDBC(Java Database Connectivity).
 An algorithm based on ID3 will be used to create decision tree and the resultant knowledge database will be used to make decisions related to the safety of coastal areas for marine and tourist activities.
 
 \subsection{User Interface}
 One of the purposes of this system is to build it as a stand alone application. Having this in mind, it is decided to build the application in Java. The application would be connected to a database in Microsoft SQL Server. Knowing that collecting, exploring and selecting the right data are critically important, I will create a database called Metinfo.
 The attributes are:
+
+XXX the following is just false --- of course, attributes must not be
+hardcoded, but come from the training data XXX
 
 \begin{itemize}
 \item Temperature 
