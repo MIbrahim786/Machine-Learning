@@ -4,6 +4,7 @@
 
 \usepackage{a4}
 \usepackage[hypertex]{hyperref}
+\usepackage{graphicx}
 
 
 \begin{document}
@@ -18,19 +19,23 @@
 }
 
 \maketitle
-
+\begin{abstract}
+xxxx yet to write
+\end{abstract}
+\pagebreak
 \tableofcontents
-
+\pagebreak
 \section{Introduction}
 \label{sec:int}
 
-This project is about machine learning. In simple words machine learning can be described as a technique or method that involves making the machine to learn and behave based on training data given and past experience to improve its performance. To cite from \cite{Alpaydin2010MachineLearning} (page XXX section):
+This project is about machine learning. In simple words machine learning can be described as a technique or method that involves making the machine to learn and behave based on training data given and past experience to improve its performance. To cite from \cite{Alpaydin2010MachineLearning} 
 \begin{quote}
   Machine learning is programming computers to optimize a performance
   criterion using example data or past experience.
+
+
+Machine learning is the study of computer algorithms that improve automatically through experience. To cite from \cite{Mitchell1997MachineLearning}
 \end{quote}
-
-
 Machine learning also covers concepts of artificial intelligence (AI) and these techniques are widely used in every field. Face detection, text recognition, strategy games, web searching application are among few to mention that we see in day-to-day life. Machine learning concepts are applied into many other fields such as mathematics, biology and statistics.
 
 
@@ -38,8 +43,15 @@ Machine learning also covers concepts of artificial intelligence (AI) and these 
 \subsection{Machine learning}
 \label{sec:machinelearn}
 
-XXX describe the setting (simple one is enough) XXX
-XXX roughly one page; overview on methods of machine learning XXX
+Machine learning combines the ideas from neuroscience and mathematics, physics, biology, and statistics to make computers learn.
+
+Machine learning is something that makes computers modify or adapt with their own action (whether the action would be predictions or controlling a robot) these action are more accurate and the accuracy is measured by how well the chosen actions imitate the correct ones. To cite from \cite{MachineLearningAnAlgorithmicPerspective}
+
+Another thing that has driven the change in direction of machine learning research is data mining, which looks at the extraction of useful information from massive datasets and which requires efficient algorithms, putting more of the emphasis back onto computer science. 
+
+The computational complexity of the machine learning methods will also be of interest to us since what we are producing is algorithms. It is particularly important because we might want to use some of the methods on very large datasets, so algorithms that have high-degree polynomial complexity in the size of dataset will be a problem. The complexity is often broken into two parts: the complexity of training and the complexity of applying the trained algorithm.
+Training does not happen very often, and is not usually time critical, so it can take longer. However, we often want a decision about a test point quickly and there are potentially lots of test points when an algorithm is in use, so this needs to have low computational cost.
+
 
 
 \subsection{Decision trees}
@@ -48,8 +60,7 @@ XXX roughly one page; overview on methods of machine learning XXX
 
 Decision tree is a learning technique that it is used to test an object and analyse it. It returns positive or negative value based on that decision can be taken for a tested object. At a lower level decision trees can be also be represented in the form of if-then rules that can be easily understand
 
-Decision tree classifies in the form of tree structure where each branch node represents a choice between a number of alternatives, and each leaf node represents a decision. Decision tree mainly classify data using attributes and it consists of decision nodes and leaf nodes. The tree has number of branches representing with the tested attribute values.
-Leaf node attribute generate uniform result and it doesn't require any additional classification testing.	
+Decision tree classifies in the form of tree structure where each branch node represents a choice between a number of alternatives, and each leaf node represents a decision. Decision tree mainly classify data using attributes and it consists of decision nodes and leaf nodes. The tree has number of branches representing with the tested attribute values. Leaf node attribute generate uniform result and it doesn't require any additional classification testing.	
 
 A leaf node indicates the value of target attribute where as a decision node states some test which can be carried out on single attribute-value, with one branch and sub-tree for each possible outcome of the test.
 
@@ -109,6 +120,49 @@ Commit : the word "commit" is often used by git, other revision control systems 
 \section{Evaluation and application}
 \label{sec:eval}
 
+\subsection{Project Goal}
+\label{sec:goal}
+
+Having information about the past weather conditions and about its influence on the decision to venture out into high
+seas, by finding out if the coastal areas are safe for marine and tourist activities using the value of meteorology parameters and the decision tree built with data mining technique.
+
+An algorithm based on the ID3 will be built for developing a data mining application to predict climate conditions.
+The architecture is shown in below figure: A database to extract values for both dependent and independent variables using JDBC(Java Database Connectivity).
+An algorithm based on ID3 will be used to create decision tree and the resultant knowledge database will be used to make decisions related to the safety of coastal areas for marine and tourist activities.
+
+\subsection{User Interface}
+One of the purposes of this system is to build it as a stand alone application. Having this in mind, it is decided to build the application in Java. The application would be connected to a database in Microsoft SQL Server. Knowing that collecting, exploring and selecting the right data are critically important, I will create a database called Metinfo.
+The attributes are:
+
+\begin{itemize}
+\item Temperature 
+\item Sea state
+\item Dew point
+\item Relative Humidity
+\item Wind Direction
+\item Wind Speed
+\item Visibility
+\item Clouds 
+\item Sea Level Pressure
+
+And there possible values are: 
+
+\item Overcast
+\item Rain
+\item Hot
+\item Excellent
+\item Very Good
+\item Slight
+\item Moderate
+\item West
+\item South West
+\item Light Rain Shower
+\item Light Rain
+\item Heavy Rain Shower
+
+
+\end{itemize}
+
 
 \section{Methodology and requirements document}
 \label{sec:methrecdoc}
@@ -118,6 +172,72 @@ Commit : the word "commit" is often used by git, other revision control systems 
 
 \subsection{Requirements}
 \label{sec:req}
+
+\subsection{Functional Requirements}
+
+\begin{center}
+\begin{tabular}{|r|l|}
+
+\hline
+Requirements & Specifications\\[5pt]
+\hline
+
+METINFOREQ1 &
+The application should be a stand-alone. 
+\\\hline
+
+METINFOREQ2 &
+Attributes are added when it needed.
+\\\hline
+
+METINFOREQ3&
+Accept the parametric values for the various attributes.
+\\\hline
+
+METINFOREQ4&
+Display the climatic conditions for a range of dates.
+\\\hline
+
+METINFOREQ5&
+Search and display climatic conditions for previous dates.
+\\\hline
+
+METINFOREQ6&
+Print weather report for a particular day. 
+\\\hline
+
+METINFOREQ7&
+Display decisions based on the values provided.
+\\\hline
+
+METINFOREQ8&
+Validate data entered into the system.
+\\\hline
+\end{tabular}
+\end{center}
+
+\subsection{Non Functional Requirements}
+
+\begin{center}
+\begin{tabular}{|r|l|}
+
+\hline
+Requirements & Specifications\\[5pt]
+\hline
+NFR1&
+User friendly GUI
+\\\hline
+
+NFR2&
+Impressive colour schemes in the GUI
+\\\hline
+
+NFR3&
+Java based
+\\\hline
+
+\end{tabular}
+\end{center}
 
 
 \subsection{Risk management}
@@ -130,3 +250,5 @@ Commit : the word "commit" is often used by git, other revision control systems 
 \bibliography{Literature}
 
 \end{document}
+
+
