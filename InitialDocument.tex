@@ -28,15 +28,14 @@ xxxx yet to write
 \section{Introduction}
 \label{sec:int}
 
-This project is based on machine learning. Machine learning is the area of study which enables computers to work together without being explicitly programmed. It describes the technique or methods that involves making the machine to learn and behave based on training data given and past experience to improve its performance.
+This project is based on machine learning. Machine learning is the area of study which enables computers to work together without being explicitly programmed. It describes the technique or methods that involves making the machine to learn and behave based on training data given and past experience to improve its performance. Machine learning computes the partial table to the full table.
 There has been a tremendous increase in the field of machine learning over the past decade, not only providing us self-driving cars, practical speech recognition,  effective web search but also enabling us to continually improve the understanding of the human genome. 
 \begin{quote}
-According to \cite{Alpaydin2010MachineLearning}(page 3, Chapter 1 ): Machine learning can be described as a technique or method that involves making the machine to learn and behave based on training data given and past experience to improve its performance. 
+According to \cite{Alpaydin2010MachineLearning}(page 3, Chapter 1): Machine learning can be described as a technique or method that involves making the machine to learn and behave based on training data given and past experience to improve its performance. 
 \end{quote}
 
-In this project we are going to use the techniques of ID3 algorithm to implement a unique algorithm.ID3 algorithm deals with the generation of decision tree. As a project scope we are going to build a Java application to test these algorithm. To illustrate the operation of ID3 we are representing the training set. 
-The training set has been given from the book of Mitchell, Tom M \cite{Mitchell1997MachineLearning}(page 59, chapter 3):
-
+In this project we are going to use the techniques of ID3 algorithm to implement a unique algorithm. ID3 algorithm deals with the generation of decision tree. As a project scope we are going to build a Java application to test these algorithm. To illustrate the operation of ID3 we are representing the training set. 
+The training set has been given from the book of Mitchell,Tom M \cite{Mitchell1997MachineLearning}(page 59, chapter 3):
 
 Machine learning also covers concepts of artificial intelligence (AI) and these techniques are widely used in every field. Face detection, text recognition, strategy games, web searching application are among few to mention that we see in day-to-day life. Machine learning concepts are applied into many other fields such as mathematics, biology and statistics. It mainly focuses on the prediction, based on known properties learned from the training data where as data mining focuses on the discovery of unknown properties on the data.
 The main objective of machine learning is to program computers to use the pattern data or past experience to solve a given problem.
@@ -44,35 +43,24 @@ The main objective of machine learning is to program computers to use the patter
 \subsection{Machine learning}
 \label{sec:machinelearn}
 
-Machine learning combines the ideas from neuroscience and mathematics, physics, biology, and statistics to make computers learn. XXX this is empty talk --- the truth is much more precise and concrete XXX
-
-According to \cite{MachineLearning2009AlgorithmicPerspective} (XXX where? XXX), machine learning is something that makes computers modify or adapt with their own action (whether the action would be predictions or controlling a robot) XXX these action are more accurate (XXX than what? XXX) and the accuracy is measured by how well the chosen actions imitate the correct ones.
-
-In \cite{MachineLearning2009AlgorithmicPerspective} we find (XXX where? XXX):
-\begin{quote}
-  Another thing that has driven the change in direction of machine learning research is data mining, which looks at the extraction of useful information from massive datasets and which requires efficient algorithms, putting more of the emphasis back onto computer science.
-\end{quote}
-The computational complexity of the machine learning methods will also be of interest to us since what we are producing is algorithms. It is particularly important because we might want to use some of the methods on very large datasets, so algorithms that have high-degree polynomial complexity in the size of dataset will be a problem. The complexity is often broken into two parts: the complexity of training and the complexity of applying the trained algorithm.
-Training does not happen very often, and is not usually time critical, so it can take longer. However, we often want a decision about a test point quickly and there are potentially lots of test points when an algorithm is in use, so this needs to have low computational cost. XXX what is the relevance of this paragraph? XXX
-
-XXX MISSING IS THE PRECISE DEFINITION! XXX
+According to \cite{MachineLearning2009AlgorithmicPerspective}(page 5, Section 1.2): Machine Learning is something that makes computers modify or adapt with their own action (whether the action would be predictions or controlling a robot)so that these actions get more accurate where accuracy is measured by how well the chosen actions reflect the correct ones.
 
 
 \subsection{Decision trees}
 \label{sec:dectree}
 
-
 Decision tree is a learning technique that it is used to test an object and analyse it. It returns positive or negative value based on that decision can be taken for a tested object. At a lower level decision trees can be also be represented in the form of if-then rules that can be easily understand
 
 Decision tree classifies in the form of tree structure where each branch node represents a choice between a number of alternatives, and each leaf node represents a decision. Decision tree mainly classify data using attributes and it consists of decision nodes and leaf nodes. The tree has number of branches representing with the tested attribute values. Leaf node attribute generate uniform result and it doesn't require any additional classification testing.
 
-XXX How does this relate to the general algorithmic problem of machine learning? One needs PRECISE DEFINITIONS! XXX
+
+XXX How does this relate to the general algorithmic problem of machine learning? One needs PRECISE DEFINITIONS! XXX  
 
 A leaf node indicates the value of target attribute where as a decision node states some test which can be carried out on single attribute-value, with one branch and sub-tree for each possible outcome of the test.
 
 Decision Tree classify instances by sorting them down the tree from the root to some leaf node, which provide the classifications of the instances, Each node in the tree specifies a test of some attribute of the instances and each branch descending.
 Decision tree are commonly used for obtaining information for the purpose of decision making. The tree starts with root node then user split each node recursively according to decision tree learning algorithm.
-According to Tom M. Mitchell XXX where? make precise citations! and no name-dropping! XXX Decision tree learning is a method for approximating discrete-valued target functions, in which the learned function is represented by a decision tree. Decision tree learning is one of the most widely used and practical methods for inductive inference. The 3 widely used decision tree learning algorithms are: ID3, ASSISTANT and C4.5. Based on research have decided to do an implementation on ID3 algorithm. XXX SSources? XXX
+According to \cite{Mitchell1997MachineLearning}(page 52, chapter 3): Decision tree learning is a method for approximating discrete-valued target functions, in which the learned function is represented by a decision tree. Decision tree learning is one of the most widely used and practical methods for inductive inference. The 3 widely used decision tree learning algorithms are: ID3, ASSISTANT and C4.5. Based on research have decided to do an implementation on ID3 algorithm. To cite from \cite{Mitchell1997MachineLearning}(page 55, chapter 3):
 
 
 \subsection{ID3}
@@ -80,8 +68,9 @@ According to Tom M. Mitchell XXX where? make precise citations! and no name-drop
 
 ID3 Algorithm:
 
-ID3 algorithm deals with the generation of decision tree, J.Ross Quinlan developed ID3 at the University of Sydney in the year 1983. XXX SOURCE? XXX The fundamental idea of ID3 is to build the decision tree by using top-down greedy search through the given sets to test each attribute at every tree node.
-In case of ID3 algorithm, it takes three set of parameters
+ID3 algorithm deals with the generation of decision tree, J.Ross Quinlan developed ID3 at the University of Sydney in the year 1983. To cite from \cite{OverviewOfDecisionTrees}
+The fundamental idea of ID3 is to build the decision tree by using top-down greedy search through the given sets to test each attribute at every tree node.
+According to \cite{Mitchell1997MachineLearning}(page 60, chapter 3): In case of ID3 algorithm, it takes three set of parameters.
 (Examples, Target attribute, Attributes)
 First is an example that represents the training set. Here training set contains both positive and negative samples. Target attribute is the one whose value has to be determined by using decision tree. And third parameter is the list of attributes that will be tested by the decision tree. Attribute selection is an important part of ID3 algorithm. With the attribute selection step, two terms comes into picture: Entropy and Information gain. With the attribute selection process, the algorithm decides which attribute will be appropriate for becoming a node in the tree.
 For an instance play ball. In this example, outlook, temperature, humidity, wind, play ball are attributes. Out of this attributes play ball is considered as classifier because depending on the value of play ball (yes or no), the decision will be made whether tennis can be played or not.
@@ -95,11 +84,10 @@ For an instance play ball. In this example, outlook, temperature, humidity, wind
 
 Source control management (Git):
 
-Git is a powerful, fastest, sophisticated distributed version control system this is quickly replacing subversion in open source and corporate programming communities. It is written in C language and it is active from several years. It designed to handle extremely large projects with speed and efficiency,	but just as well suited for small personal repositories; it is especially popular in the open source community, serving as a development platform for projects like the Linux Kernel, Ruby on Rails, WINE or X.org.[4] XXX ??? XXX
+Git helps users to communicate securely with remote repository at GitHub.com. It is a remote repository hosting provider with which we can share projects.	 
+According to \cite{Chacon2011ProGit} (page 5, chapter 1): Git is a powerful, fastest, sophisticated distributed version control system this is quickly replacing subversion in open source and corporate programming communities. It is written in C language and it is active from several years. It designed to handle extremely large projects with speed and efficiency,	but just as well suited for small personal repositories; it is especially popular in the open source community, serving as a development platform for projects like the Linux Kernel, Ruby on Rails, WINE or X.org. 
 Birth of GIT:
-In the year 2002 Linus Benedict Torvalds uses Bit-Keeper for tracking Linux when it gets better, he writes his own Source Control Management, GIT. Later GIT officially used to track Linux and released GIT 1.5.0 version in the year 2007.
-I will be using 1.7.8 version. XXX Sources? XXX
-
+According to \cite{Chacon2011ProGit}(page 5, chapter 1): In the year 2002 Linus Benedict Torvalds uses Bit-Keeper for tracking Linux when it gets better, he writes his own Source Control Management, GIT. Later GIT officially used to track Linux and released GIT 1.5.0 version in the year 2007.I will be using 1.7.8 version. 
 Repository:  A repository is a set or collection of commits, the work which you have done past it shows in an archive and looks like project's working tree in your machine or someone else's. It holds a set of branches and tags, to identify certain commits by name.
 
 The index : Git does not commit changes directly from the working tree into repository. Changes are first registered in the index,it is the way of confirming changes one by one before doing any commit.																										
@@ -112,7 +100,6 @@ Commit : the word "commit" is often used by git, other revision control systems 
 \subsection{Unit testing (JUnit)}
 \label{sec:junit}
 
-XXX sources? XXX
 
 Junit is a tool for project testing and debugging created by Kent beck and Erich Gamma.
 JUnit is an open source java testing framework which uses annotations to identify methods that are tests. It also called as tool for project testing and debugging. JUnit assumes that all test methods will be executed in an arbitrary order. Consequently tests should not depend on other tests.
@@ -128,16 +115,13 @@ Features of JUnit Testing Framework
 \item Test suites for easily organizing and running tests.
 \item Graphical and textual test runners.
 
-xxxx yet to add more 
+Once the application will be completed, it will be tested with help of JUnit tool in the eclipse IDE. 
+
 
 \end{itemize}
 
 \subsection{Document writing (Latex)}
 \label{sec:latex}
-
-
-
-
 
 \subsection{Documentation of source code}
 \label{sec:documentsource}
@@ -146,59 +130,25 @@ xxxx yet to add more
 \section{Evaluation and application}
 \label{sec:eval}
 
-\subsection{Project goal}
-\label{sec:goal}
+\subsection{Phase 1}
+\label{sec:phase}
 
-Having information about the past weather conditions and about its influence on the decision to venture out into high
-seas, by finding out if the coastal areas are safe for marine and tourist activities using the value of meteorology parameters and the decision tree built with data mining technique.
+The main idea of my project is to implement the basic ID3 algorithm and Java application. The training set will be created and tested using Java application. The application reads the given training set and it computes the decision tree. The decision tree and ID3 algorithm has a very specific way to extend the partial table to full table. The example table can be found here \cite{Mitchell1997MachineLearning}(page 59, chapter 3): 
 
-An algorithm based on the ID3 will be built for developing a data mining application to predict climate conditions.
-The architecture is shown in below figure:
+\subsection{Phase 2}
+\label{sec:phase}
 
-XXX an external database is not of use here --- complete overkill, and making
-the system hard to use; the input is just given as files; very important also:
-it is hard to create tables with databases, but this is needed (of course,
-we do not hardcode attributes!) XXX
+Once the application is completed, it will be tested with the help of JUnit tool. The tool which I used to test my application is eclipse IDE, It supports creating test cases and running test suites so it will be easy to use for our application.
 
- A database to extract values for both dependent and independent variables using JDBC(Java Database Connectivity).
-An algorithm based on ID3 will be used to create decision tree and the resultant knowledge database will be used to make decisions related to the safety of coastal areas for marine and tourist activities.
+\subsection{Phase 3}
+\label{sec:phase}
 
-\subsection{User interface}
+The major part of our project is evaluation. Implementation of our training sets is evaluated, this evaluation will be able to find how often these sets are correct and how often they are not.  
 
-One of the purposes of this system is to build it as a stand alone application. Having this in mind, it is decided to build the application in Java. The application would be connected to a database in Microsoft SQL Server. Knowing that collecting, exploring and selecting the right data are critically important, I will create a database called Metinfo.
-The attributes are:
+A training set of an unseen situation can be placed into our algorithm, which in turn will give an answer. Then we can compare whether the evaluation given is the one we wanted.
 
-XXX the following is just false --- of course, attributes must not be
-hardcoded, but come from the training data XXX
+To test the algorithm we can check by assuming all answers given by it are false. Then an example can be applied which we have read up upon from literature or case studies. the evaluation given by our algorithm can then be compared with the ones from the source document.
 
-\begin{itemize}
-\item Temperature 
-\item Sea state
-\item Dew point
-\item Relative Humidity
-\item Wind Direction
-\item Wind Speed
-\item Visibility
-\item Clouds 
-\item Sea Level Pressure
-
-And there possible values are: 
-
-\item Overcast
-\item Rain
-\item Hot
-\item Excellent
-\item Very Good
-\item Slight
-\item Moderate
-\item West
-\item South West
-\item Light Rain Shower
-\item Light Rain
-\item Heavy Rain Shower
-
-
-\end{itemize}
 \pagebreak
 
 \section{Methodology and requirements document}
@@ -222,32 +172,21 @@ The application should be a stand-alone.
 \\\hline
 
 METINFOREQ2 &
-Attributes are added when it needed.
+The training set is created.
 \\\hline
 
 METINFOREQ3&
-Accept the parametric values for the various attributes.
+ID3 Algortihm is implemented. 
 \\\hline
 
 METINFOREQ4&
-Display the climatic conditions for a range of dates.
+Decision tree is created. 
 \\\hline
 
 METINFOREQ5&
-Search and display climatic conditions for previous dates.
+Giving different types of training sets to test the algorithm.
 \\\hline
 
-METINFOREQ6&
-Print weather report for a particular day. 
-\\\hline
-
-METINFOREQ7&
-Display decisions based on the values provided.
-\\\hline
-
-METINFOREQ8&
-Validate data entered into the system.
-\\\hline
 \end{tabular}
 \end{center}
 
