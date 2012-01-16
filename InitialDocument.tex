@@ -132,15 +132,19 @@ Once the application will be completed, it will be tested with help of JUnit too
 \section{Evaluation and application}
 \label{sec:eval}
 
+The main idea of this project is to implement basic ID3 algorithm, the algorithm will be tested using Java application or Java programs. The project has three main phases and will require two programs ``ComputeDecisionTree" and ``ApplyDecisionTree". 
+
+
 \subsection{Phase 1}
 \label{sec:phase}
 
-The main idea of my project is to implement the basic ID3 algorithm and Java application. The training set will be created and tested using Java application. The application reads the given training set and it computes the decision tree. The decision tree and ID3 algorithm has a very specific way to extend the partial table to full table. The example table can be found here \cite{Mitchell1997MachineLearning}(page 59, chapter 3):
+In the first phase I will develop the basic ID3 algorithm, this will then be implemented into our program ``ComputeDecisionTree". This program will read the data table (the ``training set") from a specific file. The program will execute and will produce two files. The first file will have the decision tree and in addition to a second file containing statistics that correspond to the algorithms implemented. The statistics contained within the second file will 
+include information such as the size of the total function, size of complete table, comparison of the size of the training set and size of the decision tree.
 
 \subsection{Phase 2}
 \label{sec:phase}
 
-Once the application is completed, it will be tested with the help of JUnit tool. The tool which I used to test my application is eclipse IDE, It supports creating test cases and running test suites so it will be easy to use for our application.
+In the second phase the program ``ApplyDecisionTree " will read two files. The first file is the decision tree produced from phase 1 and the second file is the data table (the ``training set"). The program will then produce statistics on the comparison of the values of the target attribute (output variable) as given by the decision tree and the data table.
 
 \subsection{Phase 3}
 \label{sec:phase}
