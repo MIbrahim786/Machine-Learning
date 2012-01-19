@@ -69,9 +69,13 @@ XXX From the given example of training set, the day attributes contains 14 possi
 \subsection{Decision trees}
 \label{sec:dectree}
 
-A Decision tree is a representation of a function from a set of discrete attributes to a classification. Decision tree is a special method to represent the partial training set in a complete form. We intend to create the good and shortest decision tree by applying the ID3 algorithm.  The decision tree defines the unique path from the root to some leaf. Once we compute decision tree it is easy to complete the training set. 
+A ``decision tree'' XXX reference ??? XXX is a special method to represent the partial training set in a complete form. Based on the bias ``good representations are short'', the heuristics contruct a ``short'' decision tree. A basic heuristics is captured by the ID3 algorithm XXX reference ??? XXX.
 
-Decision tree is a learning technique that is used to test an object and analyse it. It returns positive or negative value based on that decision can be taken for a tested object. At a lower level decision trees can be also be represented in the form of if-then rules that can be easily understand.
+XXX Explanation of decision trees: XXX  The decision tree defines the unique path from the root to some leaf. Once we compute decision tree it is easy to complete the training set. 
+
+It returns ``positive'' or ``negative'' value based on that decision can be taken for a tested variable. At a lower level decision trees can be also be represented in the form of if-then rules that can be easily understand.
+
+XXX example XXX 2 pages XXX
 
 According to \cite{Mitchell1997MachineLearning}(page 52,chapter 3): Decision tree classifies in the form of tree structure where each branch node represents a choice between a number of alternatives, and each leaf node represents a decision. Decision tree mainly classify data using attributes and it consists of decision nodes and leaf nodes. The tree has number of branches representing with the tested attribute values. Leaf node attribute generate uniform result and it doesn't require any additional classification testing. A leaf node indicates the value of target attribute where as a decision node states some test which can be carried out on single attribute-value, with one branch and sub-tree for each possible outcome of the test.
 
@@ -91,6 +95,9 @@ According to \cite{Mitchell1997MachineLearning}(page 60, chapter 3): In case of 
 (Examples, Target attribute, Attributes)
 First is an example that represents the training set. Here training set contains both positive and negative samples. Target attribute is the one whose value has to be determined by using decision tree. And third parameter is the list of attributes that will be tested by the decision tree. Attribute selection is an important part of ID3 algorithm. With the attribute selection step, two terms comes into picture: Entropy and Information gain. With the attribute selection process, the algorithm decides which attribute will be appropriate for becoming a node in the tree.
 For an instance play ball. In this example, outlook, temperature, humidity, wind, play ball are attributes. Out of this attributes play ball is considered as classifier because depending on the value of play ball (yes or no), the decision will be made whether tennis can be played or not.
+
+XXX algorithm XXX pseudo-code XXX 3 pages
+
 
 
 \section{Tools}
