@@ -33,6 +33,7 @@ There has been a tremendous increase in the field of machine learning over the p
 \begin{quote}
   Machine learning can be described as a technique or method that involves making the machine to learn and behave based on training data given and past experience to improve its performance.
 \end{quote}
+
 In this project we are going to use the techniques of ID3 algorithm to implement a unique algorithm. ID3 algorithm deals with the generation of decision tree. As a project scope we are going to build a Java application to test these algorithm. To illustrate the operation of ID3 we are representing the training set.
 The training set has been given from the book \cite{Mitchell1997MachineLearning}(page 59, chapter 3):
 \begin{quote}
@@ -44,24 +45,32 @@ The training set has been given from the book \cite{Mitchell1997MachineLearning}
 \subsection{Machine learning}
 \label{sec:machinelearn}
 
-XXX MISSING IS THE PRECISE DEFINITION! XXX
+Machine learning involves selecting the most appropriate hypothesis from an extensive database of hypotheses. The selected hypothesis ascertains the learner's knowledge and collected data in the best and possible manner.To referred  from \cite{Mitchell1997MachineLearning}(page 14, Chapter 1):
 
+Machine learning addresses the question of how to build computer programs that evolve with every task they perform. Machine learning algorithms can be utilised in various application domains. They are especially in these areas: 
+\begin{itemize}
+\item Poorly understood difficult domains where humans might not have the knowledge needed to develop effective algorithms;
+\item Domains where large databases containing valuable implicit regularities that can be discovered automatically;
+\end{itemize}
+
+\begin{quote}
+Machine learning exploits concepts from a variety of disciplines such as: Information theory, computational complexity, artificial intelligence, probability and statistics, psychology and neurobiology, control theory, and philosophy.
+\end{quote}
+
+Machine learning can be applied to complete the partial table to the full table from the given training sets. From the given example of training set,the day attributes contains 14 possible values and the missing values are 22. To finding out missing values we compute decision tree, once we compute decision tree it is easy to complete the table.
 
 \subsection{Decision trees}
 \label{sec:dectree}
 
-Decision tree is a learning technique that it is used to test an object and analyse it. It returns positive or negative value based on that decision can be taken for a tested object. At a lower level decision trees can be also be represented in the form of if-then rules that can be easily understand
+A Decision tree is a representation of a function from a set of discrete attributes to a classification. Decision tree is a special method to represent the partial training set in a complete form. We intend to create the good and shortest decision tree by applying the ID3 algorithm.  The decision tree defines the unique path from the root to some leaf. Once we compute decision tree it is easy to complete the training set. 
 
-Decision tree classifies in the form of tree structure where each branch node represents a choice between a number of alternatives, and each leaf node represents a decision. Decision tree mainly classify data using attributes and it consists of decision nodes and leaf nodes. The tree has number of branches representing with the tested attribute values. Leaf node attribute generate uniform result and it doesn't require any additional classification testing.
+Decision tree is a learning technique that is used to test an object and analyse it. It returns positive or negative value based on that decision can be taken for a tested object. At a lower level decision trees can be also be represented in the form of if-then rules that can be easily understand.
 
-
-XXX How does this relate to the general algorithmic problem of machine learning? One needs PRECISE DEFINITIONS! XXX
-
-A leaf node indicates the value of target attribute where as a decision node states some test which can be carried out on single attribute-value, with one branch and sub-tree for each possible outcome of the test.
+According to \cite{Mitchell1997MachineLearning}(page 52,chapter 3): Decision tree classifies in the form of tree structure where each branch node represents a choice between a number of alternatives, and each leaf node represents a decision. Decision tree mainly classify data using attributes and it consists of decision nodes and leaf nodes. The tree has number of branches representing with the tested attribute values. Leaf node attribute generate uniform result and it doesn't require any additional classification testing. A leaf node indicates the value of target attribute where as a decision node states some test which can be carried out on single attribute-value, with one branch and sub-tree for each possible outcome of the test.
 
 Decision Tree classify instances by sorting them down the tree from the root to some leaf node, which provide the classifications of the instances, Each node in the tree specifies a test of some attribute of the instances and each branch descending.
 Decision tree are commonly used for obtaining information for the purpose of decision making. The tree starts with root node then user split each node recursively according to decision tree learning algorithm.
-According to \cite{Mitchell1997MachineLearning}(page 52, chapter 3): Decision tree learning is a method for approximating discrete-valued target functions, in which the learned function is represented by a decision tree. Decision tree learning is one of the most widely used and practical methods for inductive inference. The 3 widely used decision tree learning algorithms are: ID3, ASSISTANT and C4.5. Based on research have decided to do an implementation on ID3 algorithm. To cite from \cite{Mitchell1997MachineLearning}(page 55, chapter 3): XXX what is this ??? XXX
+According to \cite{Mitchell1997MachineLearning}(page 52, chapter 3): Decision tree learning is a method for approximating discrete-valued target functions, in which the learned function is represented by a decision tree. Decision tree learning is one of the most widely used and practical methods for inductive inference. The 3 widely used decision tree learning algorithms are: ID3, ASSISTANT and C4.5. Based on research have decided to do an implementation on ID3 algorithm. 
 
 
 \subsection{ID3}
