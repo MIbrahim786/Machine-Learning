@@ -60,9 +60,64 @@ Machine learning exploits concepts from a variety of disciplines such as: Inform
 
 XXX ``partial table'' XXX ``training set'' XXX ``attributes'' XXX ``variables'' XXX input and output variables XXX ``full table'' XXX 3 pages XX
 
-Machine learning is the completion of the partial table (the given training sets) to a full table.
 
-XXX From the given example of training set, the day attributes contains 14 possible values and the missing values are 22. To finding out missing values we compute decision tree, once we compute decision tree it is easy to complete the table. XXX
+According to \cite{Mitchell1997MachineLearning}(page 59,Chapter 3): Training set : In machine learning training sets are generally called as tables, where each row in the table represents a single training example. 
+
+To illustrate the operation of ID3, we consider the learning task represented by example training set.
+The below table contains four attributes (i.e, Outlook, Temperature, Humidity and Wind) and a target attribute called PlayTennis,which has values boolean value yes or no for different Saturday mornings, is to be predicted based on other attributes of the morning in question.
+
+
+From the given training set:
+\begin{itemize}
+\item Outlook variable has 3 values.
+\item Temperature variable has 3 values.
+\item Humidity variable has 2 values.
+\item Wind variable has 2 values.
+\end{itemize}
+
+
+Total number of combination table could have 36 possible input for the function. We having only 14 possible values and more 22 values are missing in the table. To find out the missing values we compute decision tree. Once we know the decision tree it is easy to complete the table.
+
+\begin{tabular}{|r|l|r|l|r|l|r|l|}
+
+\hline
+Day & Outlook & Temperature & Humidity & Wind & PlayTennis & \\[5pt]
+\hline
+
+Day1 & Sunny & Hot & High & Weak & No &
+\\\hline
+Day2 & Sunny & Hot & High & Strong & No &
+\\\hline
+Day3 & Overcast & Hot & High & Weak & Yes &
+\\\hline
+Day4 & Rain & Mild & High & Weak & Yes &
+\\\hline
+Day5 & Rain & Cool & Normal & Weak & Yes &
+\\\hline
+Day6 & Rain & Cool & Normal & Strong & No &
+\\\hline
+Day7 & Overcast & Cool & Normal & Strong & Yes &
+\\\hline
+Day8 & Sunny & Mild & High & Weak & No &
+\\\hline
+Day9 & Sunny & Cool & Normal & Weak & Yes &
+\\\hline
+Day10 & Rain & Mild & Normal & Weak & Yes &
+\\\hline
+Day11 & Sunny & Mild & Normal & Strong & Yes &
+\\\hline
+Day12 & Overcast & Mild & High & Strong & Yes &
+\\\hline
+Day13 & Overcast & Hot & Normal & Weak & Yes &
+\\\hline
+Day14 & Mild & Rain & High & Strong & No &
+\\\hline
+\end{tabular}
+
+
+
+
+Machine learning is the completion of the partial table (the given training sets) to a full table.
 
 
 
