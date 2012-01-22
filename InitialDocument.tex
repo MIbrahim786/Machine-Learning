@@ -68,54 +68,56 @@ XXX ``partial table'' XXX ``training set'' XXX ``attributes'' XXX ``variables'' 
 
 According to \cite{Mitchell1997MachineLearning}(page 59,Chapter 3): Training set : In machine learning training sets are generally called as tables, where each row in the table represents a single training example. 
 
-To illustrate the operation of ID3, we consider the learning task represented by example training set.
-The below table contains four attributes (i.e, Outlook, Temperature, Humidity and Wind) and a target attribute called PlayTennis,which has values boolean value yes or no for different Saturday mornings, is to be predicted based on other attributes of the morning in question.
-
-
-From the given training set:
+To illustrate the operation of ID3, we consider the learning task represented by the example training set given in Figure \ref{fig:trainingplaytennis}. We have four attributes Outlook, Temperature, Humidity and Wind. The target attribute is called PlayTennis, which has values boolean value \texttt{yes} or \texttt{no} for different Saturday mornings, is to be predicted based on other attributes of the morning in question. From the given training set we see:
 \begin{itemize}
 \item Outlook variable has 3 values (``sunny, overcast, rain'').
 \item Temperature variable has 3 values (``hot, mild, cool'').
 \item Humidity variable has 2 values (``high, normal'').
 \item Wind variable has 2 values (``weak, strong'').
 \end{itemize}
-The total number of combinations the table could have is $3 \cdot 3 \cdot 2 \cdot 2 = 36$ possible inputs for the function. We having only $14$ possible values in the table, while 22 values are missing. To find out the missing values we compute decision tree. Once we know the decision tree it is easy to complete the table.
+The total number of combinations the table could have is $3 \cdot 3 \cdot 2 \cdot 2 = 36$ possible inputs for the function. We having only $14$ possible values in the table, while 22 values are missing. To find out the missing values we compute a decision tree. Once we know a decision tree it is easy to complete the table.
+\begin{figure}[h]
+  \centering
+  \begin{tabular}{|r|l|r|l|r|l|r|l|}
 
-\begin{tabular}{|r|l|r|l|r|l|r|l|}
+    \hline
+    Day & Outlook & Temperature & Humidity & Wind & PlayTennis & \\[5pt]
+    \hline
 
-\hline
-Day & Outlook & Temperature & Humidity & Wind & PlayTennis & \\[5pt]
-\hline
+    Day1 & sunny & hot & high & weak & no &
+    \\\hline
+    Day2 & sunny & hot & high & strong & no &
+    \\\hline
+    Day3 & overcast & hot & high & weak & yes &
+    \\\hline
+    Day4 & rain & mild & high & weak & yes &
+    \\\hline
+    Day5 & rain & cool & normal & weak & yes &
+    \\\hline
+    Day6 & rain & cool & normal & strong & no &
+    \\\hline
+    Day7 & overcast & cool & normal & strong & yes &
+    \\\hline
+    Day8 & sunny & mild & high & weak & no &
+    \\\hline
+    Day9 & sunny & cool & normal & weak & yes &
+    \\\hline
+    Day10 & rain & mild & normal & weak & yes &
+    \\\hline
+    Day11 & sunny & mild & normal & strong & yes &
+    \\\hline
+    Day12 & overcast & mild & high & strong & yes &
+    \\\hline
+    Day13 & overcast & hot & normal & weak & yes &
+    \\\hline
+    Day14 & rain & mild & high & strong & no &
+    \\\hline
+  \end{tabular}
+  \caption{Training set for \texttt{PlayTennis} example}
+  \label{fig:trainingplaytennis}
+\end{figure}
 
-Day1 & sunny & hot & high & weak & no &
-\\\hline
-Day2 & sunny & hot & high & strong & no &
-\\\hline
-Day3 & overcast & hot & high & weak & yes &
-\\\hline
-Day4 & rain & mild & high & weak & yes &
-\\\hline
-Day5 & rain & cool & normal & weak & yes &
-\\\hline
-Day6 & rain & cool & normal & strong & no &
-\\\hline
-Day7 & overcast & cool & normal & strong & yes &
-\\\hline
-Day8 & sunny & mild & high & weak & no &
-\\\hline
-Day9 & sunny & cool & normal & weak & yes &
-\\\hline
-Day10 & rain & mild & normal & weak & yes &
-\\\hline
-Day11 & sunny & mild & normal & strong & yes &
-\\\hline
-Day12 & overcast & mild & high & strong & yes &
-\\\hline
-Day13 & overcast & hot & normal & weak & yes &
-\\\hline
-Day14 & rain & mild & high & strong & no &
-\\\hline
-\end{tabular}
+
 
 
 
