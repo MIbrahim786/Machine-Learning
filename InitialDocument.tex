@@ -78,39 +78,39 @@ To illustrate the operation of ID3, we consider the learning task represented by
 The total number of combinations the table could have is $3 \cdot 3 \cdot 2 \cdot 2 = 36$ possible inputs for the function. We having only $14$ possible values in the table, while 22 values are missing. To find out the missing values we compute a decision tree. Once we know a decision tree it is easy to complete the table.
 \begin{figure}[h]
   \centering
-  \begin{tabular}{|r|l|r|l|r|l|r|l|}
+  \begin{tabular}{|r|l|r|l|r|l|r|}
 
     \hline
-    Day & Outlook & Temperature & Humidity & Wind & PlayTennis & \\[5pt]
+    Day & Outlook & Temperature & Humidity & Wind & PlayTennis\\
     \hline
 
-    Day1 & sunny & hot & high & weak & no &
+    Day1 & sunny & hot & high & weak & no
     \\\hline
-    Day2 & sunny & hot & high & strong & no &
+    Day2 & sunny & hot & high & strong & no
     \\\hline
-    Day3 & overcast & hot & high & weak & yes &
+    Day3 & overcast & hot & high & weak & yes
     \\\hline
-    Day4 & rain & mild & high & weak & yes &
+    Day4 & rain & mild & high & weak & yes
     \\\hline
-    Day5 & rain & cool & normal & weak & yes &
+    Day5 & rain & cool & normal & weak & yes
     \\\hline
-    Day6 & rain & cool & normal & strong & no &
+    Day6 & rain & cool & normal & strong & no
     \\\hline
-    Day7 & overcast & cool & normal & strong & yes &
+    Day7 & overcast & cool & normal & strong & yes
     \\\hline
-    Day8 & sunny & mild & high & weak & no &
+    Day8 & sunny & mild & high & weak & no
     \\\hline
-    Day9 & sunny & cool & normal & weak & yes &
+    Day9 & sunny & cool & normal & weak & yes
     \\\hline
-    Day10 & rain & mild & normal & weak & yes &
+    Day10 & rain & mild & normal & weak & yes
     \\\hline
-    Day11 & sunny & mild & normal & strong & yes &
+    Day11 & sunny & mild & normal & strong & yes
     \\\hline
-    Day12 & overcast & mild & high & strong & yes &
+    Day12 & overcast & mild & high & strong & yes
     \\\hline
-    Day13 & overcast & hot & normal & weak & yes &
+    Day13 & overcast & hot & normal & weak & yes
     \\\hline
-    Day14 & rain & mild & high & strong & no &
+    Day14 & rain & mild & high & strong & no
     \\\hline
   \end{tabular}
   \caption{Training set for \texttt{PlayTennis} example}
