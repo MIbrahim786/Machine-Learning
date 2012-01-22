@@ -1,4 +1,4 @@
-# Example from [Mitchell, Machine Learning]
+# Example from [Mitchell, Machine Learning], Chapter 3, Page 59
   outlook temperature humidity wind play
 1 sunny hot high weak no
 2 sunny hot high strong no
