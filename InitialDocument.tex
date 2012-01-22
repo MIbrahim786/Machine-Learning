@@ -68,14 +68,7 @@ XXX ``partial table'' XXX ``training set'' XXX ``attributes'' XXX ``variables'' 
 
 According to \cite{Mitchell1997MachineLearning}(page 59,Chapter 3): Training set : In machine learning training sets are generally called as tables, where each row in the table represents a single training example. 
 
-To illustrate the operation of ID3, we consider the learning task represented by the example training set given in Figure \ref{fig:trainingplaytennis}. We have four attributes Outlook, Temperature, Humidity and Wind. The target attribute is called PlayTennis, which has values boolean value \texttt{yes} or \texttt{no} for different Saturday mornings, is to be predicted based on other attributes of the morning in question. From the given training set we see:
-\begin{itemize}
-\item Outlook variable has 3 values (``sunny, overcast, rain'').
-\item Temperature variable has 3 values (``hot, mild, cool'').
-\item Humidity variable has 2 values (``high, normal'').
-\item Wind variable has 2 values (``weak, strong'').
-\end{itemize}
-The total number of combinations the table could have is $3 \cdot 3 \cdot 2 \cdot 2 = 36$ possible inputs for the function. We having only $14$ possible values in the table, while 22 values are missing. To find out the missing values we compute a decision tree. Once we know a decision tree it is easy to complete the table.
+To illustrate the operation of ID3, we consider the learning task represented by the example training set given in Figure \ref{fig:trainingplaytennis}. We have four attributes Outlook, Temperature, Humidity and Wind. The target attribute is called PlayTennis, which has values boolean value \texttt{yes} or \texttt{no} for different Saturday mornings, is to be predicted based on other attributes of the morning in question.
 \begin{figure}[h]
   \centering
   \begin{tabular}{|c|l|l|l|l|l|l|}
@@ -115,7 +108,14 @@ The total number of combinations the table could have is $3 \cdot 3 \cdot 2 \cdo
   \label{fig:trainingplaytennis}
 \end{figure}
 
-
+From the given training set we see:
+\begin{itemize}
+\item Outlook variable has 3 values (``sunny, overcast, rain'').
+\item Temperature variable has 3 values (``hot, mild, cool'').
+\item Humidity variable has 2 values (``high, normal'').
+\item Wind variable has 2 values (``weak, strong'').
+\end{itemize}
+The total number of combinations the table could have is $3 \cdot 3 \cdot 2 \cdot 2 = 36$ possible inputs for the function. We having only $14$ possible values in the table, while 22 values are missing. To find out the missing values we compute a decision tree. Once we know a decision tree it is easy to complete the table.
 
 
 
