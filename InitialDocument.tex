@@ -122,6 +122,18 @@ The total number of combinations the table could have is $3 \cdot 3 \cdot 2 \cdo
   to a full table (using some bias).
 \end{center}
 
+In order to see better the requirements, we outline a simple fictional use-case:
+\begin{enumerate}
+\item There is one player, John, playing (sometimes) tennis Saturday morning in the tennis centre.
+\item The manager David of the tennis centre wants to predict when John might be coming, so that resources can be managed more effectively.
+\item After having talking to John, David thinks that the four attributes (``input variables'') \texttt{Outlook}, \texttt{Temperature}, \texttt{Humidity} and \texttt{Wind} are enough to predict the target attribute (``output variable'') \texttt{PlayTennis}.
+\item David then collects data over a year, resulting in 14 different weeks, represented in Figure \ref{fig:trainingplaytennis}.
+\item Now David asks the machine learning centre MI to predict from this partial data, the ``training set'', the missing data.
+\item MI believes that there should be a relatively simple model, and so finding a small decision tree, using the ID3 algorithm, should be a good choice.
+\item The algorithm is run, computing a decision tree $T$.
+\item Now, once having any decision tree $T$ for the data (there are many!), if David has a query, that is, David knows the values for the four attributes for the next Saturday, this fictional row of the ``complete table'' is entered into the algorithm for evaluating $T$, and the value of \texttt{PlayTennis} is obtained. David reserves accordingly for John a space or not.
+\item But before embarking on a permanent contract with MI for answering such queries (every query costs a lot of money), David wants to evaluate the quality of the prediction (that is, the quality of $T$). Since he is not dumb, he withheld from the year of observation $10$ further observations ($10$ more rows with values for inputs and output). Before now entering the contract, these $10$ queries with given outputs (the ``test set'') are fed into $T$ (resp.\ the evaluation-program), and the number of correct predictions is output. David will then decide whether the performance seems sufficient.
+\end{enumerate}
 
 
 
