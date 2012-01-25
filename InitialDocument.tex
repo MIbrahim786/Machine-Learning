@@ -143,8 +143,7 @@ In order to see better the requirements, we outline a simple fictional use-case:
 
 To cite from \cite{Mitchell1997MachineLearning}(page 59, chapter 3): A ``decision tree'' is a special method to represent the partial training set in a complete form. Based on the bias ``good representations are short'', the heuristics construct a ``short'' decision tree. A basic heuristics is captured by the ID3 algorithm. According to \cite{Mitchell1997MachineLearning}(page 55, chapter 3) The ID3 algorithms learns decision trees by constructing them top down, each instance attribute is evaluated using a statistical test to determine how well it alone classifies the training examples. The best attribute is selected and used as the test at the root node of the tree. A descendant of the root node is then created for each possible value of this attribute , and the training examples are sorted to the appropriate descendant node. The entire process is then repeated using the training examples associated with each descendant node to select the best attribute to test at that point in the tree. 
 
-
-Explanation of decision trees: To refer from \cite{Mitchell1997MachineLearning}(page 52, chapter 3): The decision tree defines the unique path from the root to some leaf. Once we compute decision tree it is easy to complete the training set. 
+Explanation of decision trees: To refer from \cite{Mitchell1997MachineLearning}(page 52, chapter 3): The decision tree defines the unique path from the root of the tree to some leaf node, which provides the classification of the instance. Once we compute decision tree it is easy to complete the training set table. 
 
 It returns ``positive'' or ``negative'' value based on that decision can be taken for a tested variable. At a lower level decision trees can be also be represented in the form of if-then rules that can be easily understand.
 
@@ -160,17 +159,42 @@ According to \cite{Mitchell1997MachineLearning}(page 52, chapter 3): Decision tr
 \subsection{ID3}
 \label{sec:ID3}
 
-ID3 Algorithm:
+According to \cite{OverviewOfDecisionTrees}(page 1): ID3 algorithm is invented by Ross Quinlan, it used to generate the decision tree. 
+To cited from \cite{OverviewOfDecisionTrees}(page 1): ID3 searches through the attributes of the training instances and extracts the attribute that best separates the given examples. If the attribute perfectly classifies the training sets then the ID3 stops; otherwise it recursively operates on the m (where m = number of possible values of an attribute) partitioned subsets to get their "best" attribute. \\
 
-ID3 algorithm deals with the generation of decision tree, J.Ross Quinlan developed ID3 at the University of Sydney in the year 1983. To cite from \cite{OverviewOfDecisionTrees} XXX what is this ??? XXX
+According to the book of \cite{Mitchell1997MachineLearning}(page 56, chapter 3) ID3(Examples, target-attribute, attribute)
+\begin{itemize}
+\item Examples : are the training examples.
+\item target-attribute : is the attribute whose value is to be predicted by the tree.
+\item Attributes : is a list of other attributes that may be tested by the learned decision tree.\\
+Returns a decision tree that correctly classifies the given examples.
+\end{itemize}
+
+\begin{tabbing}
+Create a root node for the tree\\
+If \= all examples are positive, Return the single-node tree Root, with label = +.\\
+If \= all examples are negative, Return the single-node tree Root, with label = -.\\
+If \= Attributes is empty, Return the single-node tree Root, with label = most common value of\\ target attribute in Examples\\
+Otherwise Begin \\
+\> then \=  A = The Attribute that best classifies examples.\\
+\> Decision Tree attribute for Root = A.\\
+\> For each possible value, vi, of A,\\
+\> \> Add a new tree branch below Root, corresponding to the test A = vi.\\
+\> \> Let Examples(vi) be the subset of examples that have the value vi for A\\
+\> \> If Examples(vi) is empty\\
+\> \> Then below this new branch add a leaf node with label = most\\
+\> \> common target value in the examples\\
+\> \> Else below this new branch add the subtree ID3 \\
+\> \> (Examples(vi), target attribute, Attributes – {A})\\
+
+end\\
+return Root\\
+\end{tabbing}
+
 The fundamental idea of ID3 is to build the decision tree by using top-down greedy search through the given sets to test each attribute at every tree node.
 According to \cite{Mitchell1997MachineLearning}(page 60, chapter 3): In case of ID3 algorithm, it takes three set of parameters.
-(Examples, Target attribute, Attributes)
 First is an example that represents the training set. Here training set contains both positive and negative samples. Target attribute is the one whose value has to be determined by using decision tree. And third parameter is the list of attributes that will be tested by the decision tree. Attribute selection is an important part of ID3 algorithm. With the attribute selection step, two terms comes into picture: Entropy and Information gain. With the attribute selection process, the algorithm decides which attribute will be appropriate for becoming a node in the tree.
 For an instance play ball. In this example, outlook, temperature, humidity, wind, play ball are attributes. Out of this attributes play ball is considered as classifier because depending on the value of play ball (yes or no), the decision will be made whether tennis can be played or not.
-
-XXX algorithm XXX pseudo-code XXX 3 pages
-
 
 
 \section{Tools}
