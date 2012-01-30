@@ -20,7 +20,11 @@
 
 \maketitle
 \begin{abstract}
-  XXX
+  
+ This project consists of two software programs, one of which will take a training set as input and produce an output of decision tree. The second stage of this project is to create the second program which will take both training set and the decision tree output from the first program. Finally the resulting output of the second program will produce statistics on the comparison of the values of the target attribute as given by the decision tree and the data table.
+  
+ 
+  
 \end{abstract}
 
 \tableofcontents
@@ -133,8 +137,6 @@ In order to see better the requirements, we outline a simple fictional use-case:
 \end{enumerate}
 
 
-
-
 \subsection{Decision trees}
 \label{sec:dectree}
 
@@ -144,7 +146,6 @@ Explanation of decision trees: To refer from \cite{Mitchell1997MachineLearning}(
 
 It returns ``positive'' or ``negative'' value based on that decision can be taken for a tested variable. At a lower level decision trees can be also be represented in the form of if-then rules that can be easily understand.
 
-XXX example XXX 2 pages XXX
 
 According to \cite{Mitchell1997MachineLearning}(page 52,chapter 3): Decision tree classifies in the form of tree structure where each branch node represents a choice between a number of alternatives, and each leaf node represents a decision. Decision tree mainly classify data using attributes and it consists of decision nodes and leaf nodes. The tree has number of branches representing with the tested attribute values. Leaf node attribute generate uniform result and it doesn't require any additional classification testing. A leaf node indicates the value of target attribute where as a decision node states some test which can be carried out on single attribute-value, with one branch and sub-tree for each possible outcome of the test.
 
@@ -225,14 +226,13 @@ There are three main reasons for unit testing :
 \item Confusing interactions of multiple errors in widely different parts of the software are eliminated.
 \item The module is small enough that we can attempt to test it in some demonstrably exhaustive fashion.
 \end{enumerate}
-To refere from \cite{JUnitTestingUtilityTutorial}(page 1): JUnit is a framework which helps to test, debug and implement the program in Java. It provides a simple way to explicitly test specific areas of a Java program, it is extensible and can be employed to test a hierarchy of program code either singularly or as multiple units.
+To refer from \cite{JUnitTestingUtilityTutorial}(page 1): JUnit is a framework which helps to test, debug and implement the program in Java. It provides a simple way to explicitly test specific areas of a Java program, it is extensible and can be employed to test a hierarchy of program code either singularly or as multiple units.
 
 JUnit helps the idea of first testing then coding, in that it is possible to setup test data for a unit which defines what the expected output is and then code until the tests pass. It is believed by some that this practice of "test a little, code a little, test a little, code a little..." increases programmer productivity and stability of program code whilst reducing programmer stress and the time spent debugging
 
 According to \cite{JUnitTestingUtilityTutorial}(page 1): JUnit helps first testing then coding, in the program it is possible to arrange the test data for a unit which defines what the expected output is and then code until the tests pass.\\
 In our project the program will be tested and implemented same time using JUnit testing.  
 
-\end{itemize}
 
 \subsection{Document writing (Latex)}
 \label{sec:latex}
@@ -246,7 +246,7 @@ This is the first time that I have used latex to write my project report.Using t
 
 To implement the software we will be using Doxygen and Javadoc tools. 
 
-To refer from \cite{Doxygen}(page 1): Doxygen Documentation : Doxygen is a documentation system which generate multiple programming languages. Example C, C++. C#, Java, Python, PHP. It is a tools which we use to write a software reference documentation. The documentation is written within the code, and is relatively easy to keep up to date.
+To refer from \cite{Doxygen}(page 1): Doxygen Documentation : Doxygen is a documentation system which generate multiple programming languages. Example C, C++, Java, Python, PHP. It is a tools which we use to write a software reference documentation. The documentation is written within the code, and is relatively easy to keep up to date.
 It helps in three ways: 
 \begin{itemize}
 \item It can generate an on-line documentation browser in the form of HTML code and off-line reference manual in Latex from a set of documented source files. It also generate output in (Ms-Word) in RTF format, PostScript, hyperlinked PDF, compressed HTML, and Unix man pages. The documentation is extracted directly from the sources, which makes it much easier to keep the documentation consistent with the source code.
@@ -274,6 +274,9 @@ In the second phase the program ``ApplyDecisionTree " will read two files. The f
 
 \subsection{Phase 2: Thorough testing, and additional documentation}
 \label{sec:phase2}
+
+In phase 2 
+
 
 XXX further unit-tests XXX application-tests XXX
 
@@ -331,17 +334,17 @@ This section contains all the general and user functional requirements for two d
 
 \item Software should be able to compute the decision tree in a machine readable form(not human readable form).
 
-\item The software must be ensure that computed decision tree will be in separate file.
+\item The software must ensure that the computed decision tree will be in separate file.
 
-\item User could be able to visualise decision tree by providing small set of data(training set) to the software.
+\item User is able to visualise decision tree by providing small set of data(training set) to the software.
 
-\item User should able to see the statistics in a separate file.
+\item Users should able to see the statistics in a separate file.
 
-\item In a second software the user should be able to input two separate file for some statistics result.
+\item In the second software the user should be able to input two separate file for some statistics result.
 
-\item The software could be able to read the first file containing (decision tree). 
+\item The software is able to read the first file containing (decision tree). 
 
-\item The software could be able read the second file containing data table(training set). 
+\item The software is able to read the second file containing data table(training set). 
 
 \item The software should be able to produce statistics on the comparison of the values of the target attribute as given by the decision tree and the data table.
 
@@ -360,13 +363,14 @@ There are two main categories of risk:
 \item \texttt{General Risk:} These are risks not directly associated with the design of the project. General risks are usually universal and can affect anyone. Illness is a general risk as it can reduce productivity. I had fallen ill while working on this project which significantly reduced my productivity. I was granted an extension to make up for the time that was lost due to my illness. I will try to reduce this risk by maintaining a healthy lifestyle.
  
 Significant coursework load will reduce the time that I have to spend on this project. However, I will plan out a schedule with comfortable safety margins which will allow me to finish this project on time and to the best of my ability. Planning out the time I spend on this project will ensure that I give each aspect the attention that it needs.
- 
+
 The topic that I have chosen to investigate is new to me so I will require extra time to do preliminary read. Also English is not my first language so reading and writing technical English words will be more time consuming for me.
  
 \item \texttt{Technical Risk::} I will implement two different programs: `` ComputeDecisionTree" and
 ``ApplyDecisionTree". This means that if one programme malfunctions it will affect the function of the other. Also there is a slight risk of the programmes not being compatible. These issues can reduce productivity and delay reaching the end goal. These risks can be minimised by dividing each programme into smaller segments. The functionality and compatibility of the segments will be tested using Junit testing.
 
 \end{enumerate}
+
 
 \chapter{Specification Document}
 \label{cha:specdoc}
@@ -379,27 +383,27 @@ The main idea of this project is to implement the basic ID3 algorithm, and the a
 
 \item The basic ID3 algorithm will be implemented to test the software application.
 
-\item The software will allows user to input the training sets file (file format to be specified).
+\item The software will allow users to input the training set file (file format to be specified).
    
 \item The software should produce the two different files.
   
 \item The first file containing the decision tree.
 
-\item The computed decision tree not be visualised to the users, it generate the tree in a machine readable form. 
+\item The computed decision tree must not be visible to the users, it is generated in a machine readable form. 
 	
-\item By giving small example (training sets), user could be able to visualise the decision tree. 
+\item By giving a small example (training sets), users will be able to visualise the decision tree. 
 	
-\item The second file will contained the statistics that corresponds to the algorithms implemented.
+\item The second file will contain the statistics that corresponds to the algorithms implemented.
 	
 \item The statistics file include the information such as: size of total function, size of complete table, comparison of the size of the training set and the size of decision tree.
 	
-\item The another peace of software will read two files from the given input.
+\item The other peace of software will read two files from the given input.
 
-\item The software reads the first file called ``decision tree file"", which we produced in first task.
+\item The software reads the first file called ``decision tree file"", which we produced in the first task.
 
 \item The software reads the second file called ``training set"".
 	
-\item at last the program will then produce statistics on the comparison of the values of the target attribute (output variable) as given by the decision tree and the data table.
+\item At last the program will then produce statistics on the comparison of the values of the target attribute (output variable) as given by the decision tree and the data table.
 
 \end{enumerate}
 
