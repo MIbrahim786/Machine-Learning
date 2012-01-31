@@ -5,6 +5,7 @@
 \usepackage{a4}
 \usepackage[hypertex]{hyperref}
 \usepackage{graphicx}
+\usepackage{tabularx}
 
 
 \begin{document}
@@ -21,7 +22,7 @@
 \maketitle
 \begin{abstract}
   
- This project consists of two software programs, one of which will take a training set as input and produce an output of decision tree. The second stage of this project is to create the second program which will take both training set and the decision tree output from the first program. Finally the resulting output of the second program will produce statistics on the comparison of the values of the target attribute as given by the decision tree and the data table.
+This project is based on machine learning, implementing the basic ID3 algorithm and creating Java application to test ID3 algorithms. The Java application consists of two software programs, one of which will take a data table (training set) as input and produce an output of decision tree. The second stage of this project is to create the second program which will take both training set and the decision tree output from the first program. Finally the resulting output of the second program will produce statistics on the comparison of the values of the target attribute as given by the decision tree and the data table.
   
   
 \end{abstract}
@@ -234,9 +235,9 @@ In our project the program will be tested and implemented same time using JUnit 
 
 \subsection{Document writing (Latex)}
 \label{sec:latex}
-
-This is the first time that I have used latex to write my project report.Using this programme has been a highly educational experience. 
-
+ This is the first time that I have used latex to write my project report.Using this programme has been a highly educational experience for me. 
+According to \cite{Mittelbach2004TheLatexCompanion}(page 15, chapter 2):Latex will be used for several purposes, such as writing an articles, business and personal letters or producing overhead slides.
+``TEX " is a new typesetting system intended for the creation of beautiful books and especially for books that contain a lot of mathematics. The worldwide availability of ``LATEX" rapidly increased international interest in ``TEX" and in its use for typesetting a range of languages.
 
 
 \subsection{Documentation of source code}
@@ -286,13 +287,12 @@ A training set of an unseen situation can be placed into our algorithm, which in
 To test the algorithm we can check by assuming all answers given by it are false. Then an example can be applied which we have read up upon from literature or case studies. the evaluation given by our algorithm can then be compared with the ones from the source document.
 
 
-
-
 \chapter{Methodology and Requirements Document}
 \label{cha:methrecdoc}
 
 \section{Methodology}
 \label{sec:meth}
+This project will be implemented using the Waterfall software development model. We will be taking each phase of the model and applying it to each section of this project.\\ 
 
 To refer from \cite{Hamlet2001TheEngineeringofSoftware}(page 15, Chapter 1): Waterfall model: The waterfall model is a sequential design process, which has distinct goals for each phase of development. The first use of this model in the year 1950. In waterfall model, the whole process of software development is divided into separate phases. These phases in waterfall model are:
 \begin{itemize}
@@ -302,7 +302,6 @@ To refer from \cite{Hamlet2001TheEngineeringofSoftware}(page 15, Chapter 1): Wat
 \item Testing 
 \end{itemize}
 
-This project will be implemented using the Waterfall software development model. We will be taking each phase of the model and applying it to each section of this project.  
 
 
 \section{Functional requirements}
@@ -343,6 +342,65 @@ This section contains all the general and user functional requirements for two d
 
 \end{enumerate}
 
+According to project manual the requirement should be in possible format,the below requirements produce with in a table including the code and description. 
+The given code will helps us to show cross reference with the specification.\\
+
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+Code & Description\\
+\hline
+\hline 
+REQ1&
+The application is required to produce two different types of programs namely ``ComputeDecisionTree" and ``ApplyDecisionTree".
+\\\hline
+REQ2&
+The first program required to  produce two different files as output which basically contain DecisionTree and Statistics that correspond to the algorithms implemented.
+\\\hline
+
+REQ1&
+The application is required to input the training set in some file format(file format to be specified).
+\\\hline
+
+REQ2&
+The application is required to read any types of training set from a file.
+\\\hline
+
+REQ3&
+
+The application would be capable of checking the training set which has been given by the user.
+\\\hline
+
+REQ4&
+
+The application should be able to compute the decision tree in machine readable form(not visible to user).
+\\\hline
+
+REQ5&
+
+The application must be ensure that the computed decision tree would be given in a separate file.
+\\\hline
+
+REQ6&
+
+The statistics file should be able to include information such as the size of the total function, size of complete table, comparison of the size of the training set and size of the decision tree.
+\\\hline
+
+REQ7&
+
+The user could be able to apply Computed decision tree file and the data table(training set).
+\\\hline
+
+REQ7&
+
+User could be able apply Computed tree file and the data table (training set) in to second program to get final result.
+\\\hline
+
+REQ8&
+
+The application could be able to produce the statistics on the comparison of the values of the target attribute as given by decision tree and data table.
+\\\hline
+
+\end{tabularx}
 \section{Risk management}
 \label{sec:riskman}
 
@@ -390,7 +448,7 @@ The main idea of this project is to implement the basic ID3 algorithm, and the a
 	
 \item The other peace of software will read two files from the given input.
 
-\item The software reads the first file called ``decision tree file"", which we produced in the first task.
+\item The software reads the first file called ``decision tree file", which we produced in the first task.
 
 \item The software reads the second file called ``training set"".
 	
@@ -398,6 +456,86 @@ The main idea of this project is to implement the basic ID3 algorithm, and the a
 
 \end{enumerate}
 
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+Code & Description\\
+\hline
+\hline 
+
+SPEC1&
+
+The Java application produce two sets of programs:``ComputeDecisionTree" and ``ApplyDecisionTree".
+\\\hline
+
+SPEC2&
+
+The application will allow the user to select a training set file.
+\\\hline
+
+SPEC3&
+The application will produce two output files containing the decision tree and statistics.
+\\\hline
+
+SPEC4&
+The computed decision tree will be not be visible to users as it computes in machine readable form.
+\\\hline
+
+SPEC5&
+The application checks the training set to know the given sets are appropriate or not.
+\\\hline
+
+SPEC6&
+The decision tree could be visualise to users for small types of examples.
+\\\hline
+
+SPEC7&
+The second file will produce the statistics that corresponds to the algorithms implemented.  
+\\\hline
+
+SPEC8&
+The produced statistics file include the information such as: size of total function, size of complete table, comparison of the size of the training set and the size of decision tree. 
+\\\hline
+
+SPEC9&
+The second program reads two files, Computed decision tree file and data table(training set file). 
+\\\hline
+
+SPEC10&
+The final output of second program produce statistics on the comparison of the values of the target attribute as given by decision tree and the data table.
+\\\hline
+
+\end{tabularx}
+
+\section{Cross Referencing}
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+Requirements & Specification(s)\\
+\hline
+REQ1 &	SPEC1, SPEC2\\
+\hline
+
+REQ2 &	SPEC3, SPEC4,\\
+\hline
+
+REQ3 & 	SPEC5\\
+\hline
+
+REQ4 & 	SPEC6\\
+\hline
+
+REQ5 & 	SPEC2, SPEC3\\
+\hline
+
+REQ6 & 	SPEC7, SPEC8\\
+\hline
+
+REQ7 & 	SPEC9, SPEC10\\
+\hline
+
+REQ8 & 	SPEC10\\
+\hline
+\end{tabularx}
 
 \bibliographystyle{plain}
 
