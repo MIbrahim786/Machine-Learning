@@ -1,0 +1,15 @@
+# There are 3 attributes age, competition and type with possible values.
+
+
+AGE	 COMPETITION	TYPE	PROFIT
+
+old		yes		software		down
+old		no      software 		down
+old		no      hardware	 	down
+mid		yes	    software		down
+mid		yes	    hardware	    down
+mid		no	    hardware		up
+mid		no	    software		up
+new		yes	    software		up
+new		no	    hardware		up
+new		no	    software		up
