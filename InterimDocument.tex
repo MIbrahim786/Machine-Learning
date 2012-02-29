@@ -25,30 +25,65 @@
 \section{File Format}
 \label{sec:file}
 
-A file format is a specific way that information is encoded for storage in a computer file. There are different kinds of file formats for different kinds of information. Some file formats are designed for very particular sorts of data.
+A file format is a specific way that information is encoded for storage in a computer file. There are different kinds of file formats for different kinds of information. Some file formats are designed for very particular sorts of data.\\
+{\bf Syntax :} The form or structure of the expressions, statements, and program units.\\
+{\bf Semantic :} The meaning of the expressions, statement, and program units. 	\\
 
-The file format which I have decided so far:
+{\bf The syntax} :\\\\
+$<line 1>$ : comments\\
+$<Day>$, $<Outlook>$, $<Temperature>$, $<Humidity>$, $<Wind>$, $<Play>$\\
+$<Day>$:= $<type Integer >$ $<values : (numbers)>$\\
+$<Outlook>$:= $< type String >$  $<values : (sunny, overcast, rain)>$\\
+$<Temperature>$:= $< type String >$  $<values : (hot, mild, cool)>$\\
+$<Humidity>$:= $< type String >$  $<values : (high, normal )>$\\
+$<Wind>$:= $< type String >$  $<values : (weak, strong)>$\\
+$<Play>$:= $< type String >$  $<values : (no,yes)>$\\
+
+\begin{enumerate}
+
+
+
+\item The first line is a comment, hash symbol signifies a comment and the program reads the first line ignores it. 
+\item The second line will reads the number of attribute from the given training set.
+\item The program splits the attributes explicitly in second line by using commas and space to separate each attributes in training set. 
+\item The program will read the first column $<Day>$ attribute from the training set with their possible values.
+\item The program will read the second column$<Outlook>$ attribute from the training set with their possible values.
+\item The program will read the third column $<Temperature>$ attribute from the training set with their possible values.
+\item The program will read the fourth column $<Humidity>$ attribute from the training set with their possible values.
+\item The program will read the fifth column $<Wind>$ attribute from the training set with their possible values. 
+\item The program will read the Target attribute $<Play>$ from the training set with their possible values.
+
+\end{enumerate}
+
+{\bf Restrictions}
 
 \begin{itemize}
 
-\item The program ignore the first line in a file as comment.
-\item The program read the second line that is attributes.
-\item The program splits the words explicitly and it use the space and commas to read the possible values. 
+\item The first line of a program has to be ignored as comment.
+\item The first column is defined as an Integer and others are Strings.
+\item The number of possible values should be same as the number of attributes.
+\item The values in the last column should only be ``yes' or ``no'.
+\item The first column should be x1={sunny,overcast,rain}.
+\item The second column should be x2 ={hot, mild, cool}.
+\item The third column should be x3 ={high, normal}
+\item The fourth column should be x4={weak, strong}
+\item The last column (target attribute) should be x5={yes, no}\\\\
 
-The syntax : 
 
-\item Line 1 : Comment: The program ignores.
-\item Line 2 : attribute(1), attribute(2), attribute(n). The program will read the number of attributes in a single row.
-\item Line 3 : The program reads the possible values.
-\item Line n : The program reads the number of possible values.
+{\bf Example format:}\\
+# Example from [Mitchell, Machine Learning], Chapter 3, Page 59\\
+The above line is a commented line, the program ignores the line.
+
+Day, outlook, temperature, humidity, wind, play
+The above line is the second line in the program, where the attributes are separated using comma's and space. 
+ 
+1, sunny, hot, high, weak, no\\
+2, sunny, hot, high, strong, no\\
+
+The above values use the space and comma's to separate the data. Here each component of the string is used to separate the data.
+
 
 \end{itemize}
-
-
-The another choice is to use the Backus–Naur Form (BNF) is one of the two main notion techniques for context-free grammars, often used to describe the syntax of languages used in computing, such as computer programming language, document formats, instruction sets and communication protocol.
-
-
-
 
 
 \section{Comma-separated values}
