@@ -4,6 +4,7 @@
 \usepackage[hypertex]{hyperref}
 \usepackage{graphicx}
 
+
 \begin{document}
 
 \title{Exploring Machine Learning:\\
@@ -140,14 +141,73 @@ To illustrate the operation of ID3, we consider the learning task represented by
   \label{fig:trainingplaytennis}
 \end{figure}
 
-The below figure shows the complete decision tree for the above training set.\ref{fig:decisiontree}
-
 \begin{figure}[h]
 \centering
 \includegraphics[bb=0 0 1360 588,scale=0.5,keepaspectratio=true]{DecisionTree.jpg}
 \caption{Decision Tree}
 \label{fig:decisiontree}
 \end{figure}
+The below figure shows the complete decision tree for the above training set.\ref{fig:decisiontree}\\
+
+
+{\bf The decision tree can be expressed in rule format:}\\	
+
+IF outlook = sunny AND humidity = high THEN playball = no
+
+IF outlook = rain AND humidity = high THEN playball = no
+
+IF outlook = rain AND wind = strong THEN playball = yes
+
+IF outlook = overcast THEN playball = yes
+
+IF outlook = rain AND wind = weak THEN playball = yes\\
+
+The below decision tree shows the concept for PlayTennis. An example is classified by sorting it through the tree to appropriate leaf node,then returning the classification associated with this leaf ( Yes or No ). The below tree classifies the Saturday mornings according to whether or not they are suitable for playing tennis.
+
+\begin{itemize}
+
+\item The idea of decision tree is sorting them down the tree from the root to leaf node, which will provide the classification of instance.
+\item Each node in the decision tree states the some attribute of the instance.
+\item Each branch descending from that node corresponds to one of the possible values of this attribute.
+\item An instance is classified by starting at the root node of the tree,testing the attribute specified by this node, then moving down the tree branch corresponding to the value of the attribute in the given example.
+\item This process is repeated for the sub tree rooted at the new node
+
+\end{itemize}
+
+The decision tree is constructed using the techniques of ID3 algorithm. The following steps should follow to construct the decision tree.
+
+According to the book of \cite{Mitchell1997MachineLearning} (page 56, chapter 3) ID3(Examples, target-attribute, attribute)
+\begin{itemize}
+\item Examples : are the training examples \ref{fig:trainingplaytennis}
+\item target-attribute : is the attribute whose value is to be predicted by the tree.
+\item Attributes : is a list of other attributes that may be tested by the learned decision tree.\\
+Returns a decision tree that correctly classifies the given examples.\\
+\end{itemize}
+
+
+\begin{tabbing}
+Create a root node for the tree\\
+If \= all examples are positive, Return the single-node tree Root, with label = +.\\
+If \= all examples are negative, Return the single-node tree Root, with label = -.\\
+If \= Attributes is empty, Return the single-node tree Root, with label = most common value of\\ target attribute in Examples\\
+Otherwise Begin \\
+\> then \=  A = The Attribute that best classifies examples.\\
+\> Decision Tree attribute for Root = A.\\
+\> For each possible value, vi, of A,\\
+\> \> Add a new tree branch below Root, corresponding to the test A = vi.\\
+\> \> Let Examples(vi) be the subset of examples that have the value vi for A\\
+\> \> If Examples(vi) is empty\\
+\> \> Then below this new branch add a leaf node with label = most\\
+\> \> common target value in the examples\\
+\> \> Else below this new branch add the subtree ID3 \\
+\> \> (Examples(vi), target attribute, Attributes – {A})\\
+
+end\\
+return Root\\
+\end{tabbing}
+
+
+
 
 
 \begin{figure}[h]
