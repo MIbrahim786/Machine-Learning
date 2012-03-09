@@ -26,26 +26,20 @@
 \section{File Format}
 \label{sec:file}
 
-A file format is a specific way that information is encoded for storage in a computer file. There are different kinds of file formats for different kinds of information. Some file formats are designed for very particular sorts of data.\\
-{\bf Syntax :} The form or structure of the expressions, statements, and program units.\\
-{\bf Semantic :} The meaning of the expressions, statement, and program units. 	\\
+A file format is a specific way that information is encoded for storage in a computer file. There are different kinds of file formats for different kinds of information. Some file formats are designed for very particular sorts of data.
+Syntax: The form or structure of the expressions, statements, and program units. Semantic: The meaning of the expressions, statement, and program units. ???	
 
-{\bf The syntax} :\\
-
-line 1: comments\\
-attribute(1), attribute(2), attribute(3), attribute(n);
+line 1: comments ???\\
+attribute(1), attribute(2), attribute(3), attribute(n); ???
 
 
 \begin{enumerate}
-
-
-
-\item Comments are ignored in the file. 
-\item The first line is a comment, hash symbol signifies a comment and the program reads the first line and ignores it. 
-\item The program only accept upper-case (A-Z) ,lower-case (a-z) and digits (0-9). These are the letters we allowed  in a file.
-\item The second line will reads the number of attribute from the given training set.
-\item The program splits the attributes explicitly in second line by using commas and space to separate each attributes in training set. The example attributes are given below.
-\item The program will read the first column $<Day>$ attribute from the training set with their possible values.
+\item Comments are ignored in the file. ??? how do we recognise a comment? ???
+\item The first line is a comment ??? false ??? , hash symbol signifies ??? a comment and the program reads the first line and ignores it. 
+\item The program only accept upper-case (A-Z) ,lower-case (a-z) and digits (0-9). These are the letters we allowed  in a file. ??? this is false ???
+\item The second line will reads the number of attribute from the given training set. ??? false ???
+\item The program splits the attributes explicitly in second line by using commas and space to separate each attributes in training set. The example attributes are given below. ??? no commas ???
+\item The program will read the first column $<Day>$ attribute from the training set with their possible values. ??? Day ???
 \item The program will read the second column$<Outlook>$ attribute from the training set with their possible values.
 \item The program will read the third column $<Temperature>$ attribute from the training set with their possible values.
 \item The program will read the fourth column $<Humidity>$ attribute from the training set with their possible values.
