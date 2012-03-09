@@ -30,23 +30,21 @@ A file format is a specific way that information is encoded for storage in a com
 {\bf Syntax :} The form or structure of the expressions, statements, and program units.\\
 {\bf Semantic :} The meaning of the expressions, statement, and program units. 	\\
 
-{\bf The syntax} :\\\\
-$<line 1>$ : comments\\
-$<Day>$, $<Outlook>$, $<Temperature>$, $<Humidity>$, $<Wind>$, $<Play>$\\
-$<Day>$:= $<type Integer >$ $<values : (numbers)>$\\
-$<Outlook>$:= $< type String >$  $<values : (sunny, overcast, rain)>$\\
-$<Temperature>$:= $< type String >$  $<values : (hot, mild, cool)>$\\
-$<Humidity>$:= $< type String >$  $<values : (high, normal )>$\\
-$<Wind>$:= $< type String >$  $<values : (weak, strong)>$\\
-$<Play>$:= $< type String >$  $<values : (no,yes)>$\\
+{\bf The syntax} :\\
+
+line 1: comments\\
+attribute(1), attribute(2), attribute(3), attribute(n);
+
 
 \begin{enumerate}
 
 
 
-\item The first line is a comment, hash symbol signifies a comment and the program reads the first line ignores it. 
+\item Comments are ignored in the file. 
+\item The first line is a comment, hash symbol signifies a comment and the program reads the first line and ignores it. 
+\item The program only accept upper-case (A-Z) ,lower-case (a-z) and digits (0-9). These are the letters we allowed  in a file.
 \item The second line will reads the number of attribute from the given training set.
-\item The program splits the attributes explicitly in second line by using commas and space to separate each attributes in training set. 
+\item The program splits the attributes explicitly in second line by using commas and space to separate each attributes in training set. The example attributes are given below.
 \item The program will read the first column $<Day>$ attribute from the training set with their possible values.
 \item The program will read the second column$<Outlook>$ attribute from the training set with their possible values.
 \item The program will read the third column $<Temperature>$ attribute from the training set with their possible values.
@@ -85,6 +83,27 @@ The above values use the space and comma's to separate the data. Here each compo
 
 
 \end{itemize}
+
+
+\subsection{End-Of-Line}
+\label{sec:Eol}
+
+Every file has End-of-line(EOL) symbol and file terminates with the end of line symbol, the end-of-line symbols are invisible.
+There are three possibilities including end-of-line symbol in the file.
+\begin{enumerate}
+
+\item The programs declares syntax error not having end-of-line symbol.
+\item The programs doesn't show any error, it just accept it.
+\item The programs displays a warning message stating that there is no end-of-line symbol.
+
+\end{enumerate}
+
+There are 3 line end conventions in common use: CR (MacOS), LF (Unix) and CRLF (Windows). CR 
+and LF here refer to characters with ASCII code 13 and 10 respectively. 
+Different operating systems use different character sequence to indicate the end-of-line in a text file.
+Every single line has end-of-line symbol and it takes 1 byte.
+
+
 
 
 \section{Comma-separated values}
