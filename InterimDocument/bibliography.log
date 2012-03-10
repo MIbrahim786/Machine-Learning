@@ -1,0 +1,22 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2012.1.4)  21 FEB 2012 13:47
+entering extended mode
+**C:/Users/Education/MachineLearning/Bibliography.bib
+(C:/Users/Education/MachineLearning/Bibliography.bib
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.10 @Misc{Wikipedia_
+                     CommaSeparatedValues,
+? 
+! Emergency stop.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.10 @Misc{Wikipedia_
+                     CommaSeparatedValues,
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
