@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{Mitchell1997MachineLearning}
+Tom~M. Mitchell.
+\newblock {\em Machine Learning}.
+\newblock The McGraw-Hill Companies, international edition, 1997.
+\newblock ISBN 0-07-115467-1.
+
+\bibitem{Roberts2000CompleteJava2Certification}
+Simon Roberts, Philip Heller, and Michael Ernest.
+\newblock {\em Complete Java 2 Certification}.
+\newblock Sybex, second edition edition, 2000.
+\newblock ISBN 00-7821-2825-4.
+
+\bibitem{RuleInduction}
+Peter Ross.
+\newblock Rule induction.
+\newblock \url{http://www.soc.napier.ac.uk/~peter/vldb/dm/node11.html}, October
+  2000.
+
+\bibitem{Wikipedia_CommaSeparatedValues}
+Wikipedia.
+\newblock Comma-separated values.
+\newblock \url{http://en.wikipedia.org/wiki/Comma-separated_values}, february
+  2012.
+
+\end{thebibliography}
