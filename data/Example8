@@ -1,0 +1,14 @@
+€ Predictors = cust_gender,Education,Occupation and Age
+€Target attribute = Affinity_card
+
+Cust_id Cust_gender Education Occupation Age Affinity_card
+1 female masters prof 41 0
+2 male bachelor sales 27 0
+3 female HS-grad cleric 20 0
+4 male bachelor exec 45 1
+5 male masters sales 34 1
+6 male HS-grad other 38 0
+7 male bachelor sales 28 0
+8 male HS-grad sales 19 0
+9 male bachelor other 52 0
+10 male bachelor sales 27 1
