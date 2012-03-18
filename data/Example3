@@ -1,0 +1,11 @@
+Tid Refund MaritialStatus TaxableIncome Cheat
+1 Yes single 125k No
+2 No married 100k No
+3 No single 70k No
+4 Yes married 120k No
+5 No divorced 95k Yes
+6 No married 60k No
+7 Yes divorced 220k No
+8 No single 85k Yes
+9 No married 75k No
+10 No single 90k Yes
