@@ -1,0 +1,15 @@
+Age Income Student CreditRating BuysComputer
+below30 high no fair no
+below30 high no excellent no
+31to40 high no fair yes
+above40 medium no fair yes
+above40 low yes fair yes
+above40 low yes excellent no
+31to40 low yes excellent yes
+below30 medium no fair no
+below30 low yes fair yes
+above40 medium yes fair yes
+below30 medium yes excellent yes
+31to40 medium no excellent yes
+31to40 high yes fair yes
+above40 medium no excellent no
