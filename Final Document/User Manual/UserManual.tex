@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage{a4}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{pifont}
+
+\begin{document}
+
+\title{Exploring Machine Learning:\\
+  The ID3 algorithm\\
+  		User Manual}
+
+
+\author{Mohammed Ibrahim\\
+ Computer Science Department\\
+  College of Science, Swansea University\\
+  Swansea, SA2 8PP, UK
+}
+
+\pagebreak
+
+\maketitle
+\pagebreak
+
+\tableofcontents
+
+
+\abstract{This User Manual details all of the features of the two programs with the screen shots, and briefly explained how to run both the programs. }
+\pagebreak
+
+
+\section{Installaion}
+\label{sec:inst}
+
+To run both the programs user must download and install Java. The user can be able to run the program using any number of tools like example, Eclipse, Netbeans, Textpad etc.
+
+\section{Operation}
+\label{sec:op}
+
+\subsection{Training set}
+\label{sec:tr}
+
+As to check the program how it works, user must need have a data sets. The data sets examples have to follow our specified file format. Below I have given the specified input file format. By having input file format we eliminate the requirement that the program should sort the input attributes in ordered to be processed.
+Any input file should follow the following input file format otherwise the program generates the error to the user that the file format is invalid and can't be processed.
+
+
+The input file format rules are:
+\begin{enumerate}
+
+\item Comments are ignored in the file by using double slash ($//$) symbol. 
+\item Blank line also be ignored in the data file.
+\item The attributes and values are separated by using single space.
+\item Every file should have end of line.
+\item The very first recognizable line of the data file have to be an attributes.
+\item The number of attributes is inferred from the number of words in this line.
+\item The last word of the attributes is taken as the {\emph target attribute. }
+\item In the data file each subsequent line contains the values of attributes for a data point.
+\end{enumerate}
+
+\pagebreak
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=1]{../../../scr/valid.png}
+\caption{Valid training set}
+\end{figure}
+
+The above figure shows the valid training set file that includes 4 attributes and a target attributes. There are 14 possible values corresponding to each attributes.
+
+\pagebreak
+
+\subsection{Compile and Run First Program}
+\label{sec: comp}
+
+When the data sets are ready, the user can be able input the data in first program. 
+Following steps have to be followed to compile and run the programs.
+To Compile in any terminal {\bf javac firstProg.java}
+To Run the program in terminal  {\bf java firstProg Tennis\_example}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.8]{../../../scr/d2.png}
+\caption{Decision Tree for the above training set}
+\end{figure}
+
+The above figure shows the decision tree in the form of if,else clause for the above tennis example. It also shows the size of the complete table.
+
+\pagebreak
+
+
+\subsection{Compile and Run Second Program}
+\label{sec:crprog}
+
+Second program checks the produced decision tree with the help of validation sets.\\
+Validation set does not include the target attribute.\\
+User can be able to add more possible values to check the validation set.\\
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.8]{../../../scr/check.png}
+\caption{Validation set}
+\end{figure}
+
+The above figure shows the validation set has 16 possible values with out the target attribute. We give this validation set then the program outputs the target attribute.
+
+\pagebreak
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.8]{../../../scr/secondprog.png}
+\caption{Second program Output }
+\end{figure}
+
+The above figure shows the predicted attribute with error rate 0. In the validation set we have added two rows which includes possible values. Both the results are `Yes' so the error rate is 0. 
+\pagebreak
+
+The below figure shows that the validation file has two extra possible values in which one predicted attribute is given as `no'. 
+The program gives the right predicted attributes for both the values and it calculate the percentage of error rate. Error rate is a simple formula to give an idea about the accuracy of the decision tree. It calculates the proportion of examples that have been misclassified by the decision tree.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.6]{../../../scr/sc22.png}
+\caption{Validation set and Output}
+\end{figure}
+
+\pagebreak
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
