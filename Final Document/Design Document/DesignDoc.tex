@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{a4}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{pifont}
+\usepackage{tabularx}
+
+\begin{document}
+
+\title{Exploring Machine Learning:\\
+  The ID3 algorithm\\
+  		Design Document}
+
+
+\author{Mohammed Ibrahim\\
+ Computer Science Department\\
+  College of Science, Swansea University\\
+  Swansea, SA2 8PP, UK
+}
+
+\pagebreak
+
+\maketitle
+\pagebreak
+\abstract{ This document outlines all of the design principles which we have used for this project and it also discuss different methodologies. With respect to design document I have included more two document in which all the source code of our program has documented using Javadoc and Doxygen }
+
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+
+\section{Introduction}
+\label{sec:intro}
+
+The development of Machine learning project has involved several key design decisions. I will be describing all of the design aspects that have guided this project.
+
+\section{Project Strategy}
+\label{sec: pro}
+
+\subsection{Methodologies}
+\label{sec:meth}
+
+At the initial stage when designing the project we have considered several different development methodologies to base the design of the project. The waterfall model is a solid well established model and has a linear structure that has the potential to produce a good project, so we have decided to implement our project using this model. We have taken each phase of the model and applied to each section of the project.
+
+\subsection{Documentation Plan}
+\label{sec:docpl}
+
+All documentation created during this project is complete and to the point. At the beginning of the project, requirements and specifications document submitted by giving the concise idea of the project. In the middle of the term the interim document has been given to show the progress of our project. We ensure that extensive documentation is produced to fully convey all of the aspects of the system, including design, testing and user manual. The documents are broken down into small sections to provide sufficient detail at every level; this then in total makes a full structured document.
+The design document describe the project design in a formal notation by showing and explaining the UML diagram. The two Java programs has been well documented by using the tool called \emph{Doxygen}.
+The user manual will provide the screen shots of the output with the clear instructions to help user to run the program.
+% WRITE ABOUT TESTING AFTER WRITING THE TESTING DOCUMENT
+
+\subsection{Documentation of source code}
+\label{sec:doc}
+
+To implement the software we will be using Doxygen and Javadoc tools. 
+
+To refer from  \cite{Doxygen}(page 1): Doxygen Documentation : Doxygen is a documentation system which generate multiple programming languages. Example C, C++, Java, Python, PHP. It is a tools which we use to write a software reference documentation. The documentation is written within the code, and is relatively easy to keep up to date.
+It helps in three ways: 
+\begin{itemize}
+\item It can generate an on-line documentation browser in the form of HTML code and off-line reference manual in Latex from a set of documented source files. It also generate output in (Ms-Word) in RTF format, PostScript, hyperlinked PDF, compressed HTML, and Unix man pages. The documentation is extracted directly from the sources, which makes it much easier to keep the documentation consistent with the source code.
+\item doxygen can be configured to extract the code structure from undocumented source files. Doing this type is very useful find quick in large source distributions.
+\item One can `abuse' doxygen for creating normal documentation.
+\end{itemize}
+Doxygen is developed under Linux and Mac OS X, it is highly portable. It runs on most other Unix flavours as well. It supports a number of outputs formats where HTML is the most popular one. 
+
+To refer from \cite{Wikipedia_Javadoc}(page 1):  Javadoc : Javadoc is a documentation generator from Sun Microsystems  for generating API documentation in HTML format from Java source code. To refer from \cite{Javadoc}(page 1):  It is a tool that parses the declarations and documentation comments in a set of source files and produces a set of HTML pages describing the classes, interfaces, constructors, methods and field. 
+
+
+
+\subsection{Security}
+\label{sec:secur}
+
+To ensure that the two programs is secured, that is secure from corruption and accidental deletion we have created repository using \emph{GITHUB} and all the documents and source code has been kept in the repository.
+
+\section{UML Diagrams}
+\label{sec:uml}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.8]{../../../UML.png}
+\caption{UML Diagram}
+\end{figure}
+
+With this design document I have also included the source code. All the source code are well documented using {\bf Doxygen} and {\bf Javadoc}.
+
+\bibliographystyle{plain}
+
+\bibliography{Bibliography}
+
+
+\end{document}
